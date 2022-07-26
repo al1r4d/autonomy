@@ -1,0 +1,30 @@
+[
+  
+    {
+      "title"    : "Linux dan Elitisme",
+      "category" : "",
+      "tags"     : "teknologi, salinan",
+	"url"      : "/linux-dan-elitisme",
+	"date"     : "2022-07-25 00:00:00 +0700"
+	
+    } ,
+  
+    {
+      "title"    : "Mengenal XMPP",
+      "category" : "",
+      "tags"     : "teknologi",
+	"url"      : "/mengenal-xmpp",
+	"date"     : "2022-07-19 00:00:00 +0700"
+	
+    } ,
+  
+    {
+      "title"    : "Anda Tidak Butuh Komputer Terbaru",
+      "category" : "",
+      "tags"     : "teknologi",
+	"url"      : "/anda-tidak-butuh-komputer-terbaru",
+	"date"     : "2022-07-17 00:00:00 +0700"
+	
+    } 
+  
+]

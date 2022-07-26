@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="Autonomy">
+    <meta name="author" content="autonomy" />
+
+   <link rel="stylesheet" type="text/css" href="/style.css" />
+
+   	
+   
+
+
+
+
+
+
+
+   
+
+    
+    <title>Mengenal XMPP - autonomy</title>
+    
+    
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="autonomy" />
+
+    
+    
+	  </head>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Mengenal XMPP | autonomy</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Mengenal XMPP" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Setiap kali saya mengatakan bahwa XMPP adalah solusi Instant Messaging terbaik yang tersedia, seseorang berpendapat bahwa itu “terlalu sulit” atau “membingungkan” untuk digunakan oleh pengguna yang kurang mahir." />
+<meta property="og:description" content="Setiap kali saya mengatakan bahwa XMPP adalah solusi Instant Messaging terbaik yang tersedia, seseorang berpendapat bahwa itu “terlalu sulit” atau “membingungkan” untuk digunakan oleh pengguna yang kurang mahir." />
+<link rel="canonical" href="http://localhost:4000/mengenal-xmpp" />
+<meta property="og:url" content="http://localhost:4000/mengenal-xmpp" />
+<meta property="og:site_name" content="autonomy" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-19T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mengenal XMPP" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-19T00:00:00+07:00","datePublished":"2022-07-19T00:00:00+07:00","description":"Setiap kali saya mengatakan bahwa XMPP adalah solusi Instant Messaging terbaik yang tersedia, seseorang berpendapat bahwa itu “terlalu sulit” atau “membingungkan” untuk digunakan oleh pengguna yang kurang mahir.","headline":"Mengenal XMPP","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mengenal-xmpp"},"url":"http://localhost:4000/mengenal-xmpp"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- Needed for the "current" class -->
+
+
+<header>
+
+        <!-- NEWSLINE -->
+<div id="newsline" class="newsline-true noselect">
+
+    <center><p><b>Baca, terapkan, dan bagikan ke orang - orang!</b></p></center>
+</div>
+
+      
+
+<div class="wrapper">
+	
+	<h1 class="left"><a href="/" style="color:#56c8ff">Auto</a><a href="/">nomy</a><a class="span" href="#"></a></h1>
+<!--
+		<nav class="right">
+		
+	<ul>
+		<li><a href="/tentang"  >Tentang</a></li>
+	<li><a href="/pranala" >Pranala</a></li>
+	<li><a href="/berlangganan"  >Ikuti</a></li>
+	</ul>
+        
+		</nav> 
+-->
+
+        <div style="clear:both;"></div>
+
+    </div>
+
+</header>
+
+<main class="page-content">
+            <div class="container">
+    <div class="container-edge-border">
+      </div>
+<!-- Script pointing to search-script.js -->
+<script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt MIT
+// @license-end
+</script>
+
+<article class="post">
+    <h2> Mengenal XMPP </h2>
+    <div class="date">19 July 2022 </div>
+<div>
+  <div>
+    <span><svg class="article-tag-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+        <line x1="7" y1="7" x2="7" y2="7"></line>
+      </svg> 
+  
+    
+ <a href="/tag/teknologi">#teknologi</a>
+  
+</span>
+
+
+    </div>
+	<ul><li><a href="#tapi-apa-itu-xmpp">Tapi, apa itu XMPP?</a></li><li><a href="#jadi-bagaimana-saya-mulai-menggunakan-xmpp">Jadi, bagaimana saya mulai menggunakan XMPP?</a><ul><li><a href="#membuat-akun-xmpp">Membuat akun XMPP</a></li><li><a href="#masuk-ke-klien-xmpp-anda">Masuk ke klien XMPP Anda</a></li><li><a href="#enkripsi">Enkripsi</a><ul><li><a href="#omemo-di-gajim">OMEMO di Gajim</a></li></ul></li></ul></li><li><a href="#kesimpulan">Kesimpulan</a></li></ul> 
+
+<p><p>Setiap kali saya mengatakan bahwa XMPP adalah solusi <em>Instant Messaging</em> terbaik yang tersedia, seseorang berpendapat bahwa itu “terlalu sulit” atau “membingungkan” untuk digunakan oleh pengguna yang kurang mahir.</p>
+
+<p>Saya mencoba mencari panduan pengenalan untuk menggunakan XMPP yang dapat saya kirimkan kepada orang-orang yang bertanya kepada saya, tetapi saya hanya menemukan panduan tentang pengaturan server XMPP atau beberapa panduan yang dijelaskan dengan buruk, jadi saya memutuskan untuk menulis panduan sendiri sehingga rata-rata orang dapat menggunakan protokol XMPP tanpa komplikasi.</p>
+
+<h2 id="tapi-apa-itu-xmpp">Tapi, apa itu XMPP?</h2>
+
+<p>XMPP adalah standar untuk pesan instan. Sebenarnya, layanan IM propietary seperti Whatsapp berbasis pada protokol XMPP. Protokol ini dirancang untuk digunakan secara terdistribusi, di mana terdapat berbagai penyedia dan Anda dapat menggunakan salah satu yang paling Anda sukai. Hampir seperti email, Anda dapat mengobrol dengan orang yang menggunakan penyedia yang berbeda: Joe dapat mengirim email dari joe@gmail.com ke ed@outlook.com bahkan jika penyedia Joe (gmail) tidak sama dengan milik Ed (Outlook). XMPP bekerja dengan cara yang sama.</p>
+
+<p>Sifat jaringan XMPP yang terdistribusi ini memiliki banyak keuntungan. Misalnya, tidak ada satu titik kegagalan, jadi kebalikan dari apa yang terjadi dengan Whatsapp, jika server mati, sebagian besar jaringan akan tetap berjalan dan itu hanya akan mempengaruhi sebagian kecil. para pengguna.</p>
+
+<p>Ini juga memberi anda kebebasan untuk memilih penyedia yang anda inginkan dan yang anda percayai, anda tidak dipaksa untuk mempercayai perusahaan yang teduh (misalnya Facebook) untuk menyimpan percakapan kami. Anda memiliki kemungkinan menjadi penyedia Anda sendiri!</p>
+
+<h2 id="jadi-bagaimana-saya-mulai-menggunakan-xmpp">Jadi, bagaimana saya mulai menggunakan XMPP?</h2>
+
+<p>Nah, semudah membuat akun di penyedia preferensi Anda.</p>
+
+<h3 id="membuat-akun-xmpp">Membuat akun XMPP</h3>
+
+<p>Sama seperti email, dengan XMPP, kita dapat memilih di antara beberapa penyedia XMPP untuk membuat akun kita. Rekomendasi pribadi saya adalah Nixnet dan Disroot.</p>
+
+<p>Membuat akun semudah pergi ke penyedia pilihan Anda dan mengisi formulir web. Di XMPP ada fitur bagus dan Anda dapat mendaftar dari klien Anda! Tetapi Anda mungkin lebih terbiasa dengan formulir web, jadi gunakan itu jika Anda mau. Pilih nama pengguna Anda dan kata sandi yang kuat. Mungkin Anda diminta untuk menyelesaikan captcha. Itu saja, sekarang akun XMPP Anda seharusnya sudah siap. Mudah, bukan?</p>
+
+<p>Untuk masuk ke klien Anda dan membagikan pengguna XMPP Anda sehingga orang lain dapat menghubungi Anda, itu seperti email: user@domain.com. Misalnya, namasaya@contoh.org atau namaanda@xmpp.domain.com.</p>
+
+<h3 id="masuk-ke-klien-xmpp-anda">Masuk ke klien XMPP Anda</h3>
+
+<p>Sekarang Anda perlu mengunduh klien XMPP. Saya rasa sebagian besar dari Anda ingin menggunakan XMPP di ponsel Anda, tetapi Anda juga dapat menggunakannya di desktop. Jadi unduh klien tergantung pada OS Anda:</p>
+
+<ul>
+  <li>Untuk Android, Conversation adalah bagus. Anda dapat mengunduhnya dari F-Droid (<em>free software</em>, disarankan) atau dari Play Store (3,49 euro, tidak disarankan!).</li>
+  <li>Untuk iOS, Siskin IM adalah opsi yang populer. Anda dapat menemukannya di Apple Store.</li>
+  <li>Untuk desktop, rekomendasi saya adalah Gajim untuk GNU/Linux dan BSD. Untuk Windows dan macOS, meskipun Anda seharusnya tidak menggunakannya, rekomendasi saya adalah Gajim untuk Windows dan Beagle IM untuk macOS.</li>
+</ul>
+
+<p>Setelah Anda memiliki klien, yang harus Anda lakukan adalah masuk dengan akun yang Anda buat sebelumnya. Ingat bahwa formatnya seperti email, user@domain.org.</p>
+
+<h3 id="enkripsi">Enkripsi</h3>
+
+<p>Enkripsi sangat penting. XMPP mendukung beberapa metode enkripsi. Tapi kami akan fokus pada yang paling mudah: OMEMO.</p>
+
+<p>Mengaktifkan OMEMO sangat sederhana tetapi tergantung pada klien yang Anda gunakan. Norma umum yang baik adalah mencari ikon kunci dan mengkliknya, itu akan memberi Anda opsi untuk mengaktifkan OMEMO. Pada beberapa klien lain mungkin perlu menginstal plugin, misalnya di Gajim. Saya akan menjelaskan caranya.</p>
+
+<h4 id="omemo-di-gajim">OMEMO di Gajim</h4>
+
+<p>Di bilah utama di bagian atas jendela, buka Gajim &gt; Plugin. Daftar plugin yang tersedia akan muncul. Cari plugin bernama “OMEMO”, pilih dan klik tombol unduh di bawah. Ini akan meminta Anda untuk me-restart Gajim, restart. Setelah itu, ikon kunci akan muncul di setiap obrolan. Klik dan ingat untuk memilih OMEMO. Itu dia. Semuanya harus bekerja sekarang.</p>
+
+<h2 id="kesimpulan">Kesimpulan</h2>
+
+<p>Saya harap Anda menemukan panduan ini bermanfaat. Jika Anda memiliki pertanyaan, Anda selalu dapat menulis email kepada saya dan saya akan melakukan yang terbaik untuk membantu Anda.</p>
+
+<p>Saya ingin beberapa saran untuk menyempurnakan panduan ini. Niat saya adalah membuatnya sejelas mungkin bagi pengguna baru, jadi umpan balik apa pun dihargai.</p>
+
+</p>
+</article>
+<hr>
+
+
+<h1 style="color:#56c8ff">Komentar</h1>
+<p>Kirim komentar anda ke <a href="mailto:al1r4d@riseup.net">email</a> dengan subjek judul postingan ini.</p>
+
+
+    
+    
+        
+            
+                
+                <h1 style="color:#56c8ff">Pos Berkaitan</h1>
+                <ul>
+                
+                <li class="relatedPost">
+                    <a href="/linux-dan-elitisme">Linux dan Elitisme
+                    
+                    </a>
+                </li>
+                
+                
+            
+        
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+                
+                <li class="relatedPost">
+                    <a href="/anda-tidak-butuh-komputer-terbaru">Anda Tidak Butuh Komputer Terbaru
+                    
+                    </a>
+                </li>
+                
+                
+            
+        
+    
+
+
+    </ul>
+
+
+
+        </main><footer>
+  <center>
+	  <!--
+    <div>
+      <marquee direction="right">
+      <img src="/media/propaganda/linux.gif"></img>
+      <img src="/media/propaganda/getmozilla2.gif"></img>
+      <img src="/media/propaganda/gnu.png"></img>
+      <img src="/media/propaganda/emacs.gif"></img>
+      <img src="/media/propaganda/firefox.gif"></img>
+      <img src="/media/propaganda/mastodon.gif"></img>
+      <img src="/media/propaganda/chrmevil.gif"></img>
+      <img src="/media/propaganda/google_stand.gif"></img>
+      <img src="/media/propaganda/drm.gif"></img>
+    </div>
+    </marquee>
+	  -->
+<p><a href="/tentang">Tentang</a></p>
+ 
+</footer>
+	
+</body>
+</html>

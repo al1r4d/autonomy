@@ -1,0 +1,29 @@
+<!-- Needed for the "current" class -->
+{% assign current = page.url | downcase | split: '/' %}
+
+<header>
+{% if site.newsline %}
+        {% include newsline.html %}
+      {% endif %}
+
+<div class="wrapper">
+	
+	<h1 class="left"><a href="/" style="color:#56c8ff">Auto</a><a href="/">nomy</a><a class="span" href="#"></a></h1>
+<!--
+		<nav class="right">
+		
+	<ul>
+		<li><a href="/tentang" {% if current[1] == "bio" %}class="current"{% endif %} >Tentang</a></li>
+	<li><a href="/pranala" {% if current[1] == "pranala" %}class="current"{% endif %}>Pranala</a></li>
+	<li><a href="/berlangganan" {% if current[1] == "langganan" %}class="current"{% endif %} >Ikuti</a></li>
+	</ul>
+        
+		</nav> 
+-->
+
+        <div style="clear:both;"></div>
+
+    </div>
+
+</header>
+

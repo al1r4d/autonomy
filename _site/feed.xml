@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-26T17:26:32+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">autonomy</title><subtitle>untuk semua</subtitle><entry><title type="html">Linux dan Elitisme</title><link href="http://localhost:4000/linux-dan-elitisme" rel="alternate" type="text/html" title="Linux dan Elitisme" /><published>2022-07-25T00:00:00+07:00</published><updated>2022-07-25T00:00:00+07:00</updated><id>http://localhost:4000/linux-dan-elitisme</id><content type="html" xml:base="http://localhost:4000/linux-dan-elitisme"><![CDATA[<h1 id="linux-dan-elitisme">Linux dan Elitisme</h1>
+
+<p>Ada sebuah anggapan di lingkup pengguna komputer bahwa GNU/Linux user mempunyai sikap elitis dan berpikir bahwa mereka lebih baik daripada orang lain yang tidak menggunakan distro GNU/Linux. Untuk mengetahui apakah seseorang itu elitis atau tidak, ada kriteria yang perlu kita perhatikan tentang bagaimana user ini beropini tentang dirinya sendiri dan user lainnya.</p>
+
+<!--more-->
+
+<h2 id="prolog">Prolog</h2>
+<p>Mungkin dari kita semua pernah merasa seperti dipaksa lalu merasa bingung atau tidak mengerti mengenai apa yang diucapkan seseorang, entah itu dari internet maupun secara langsung. Meskipun begitu, ada juga orang yang tidak peduli terhadap ucapan tersebut.</p>
+
+<p>Misalnya, Si <strong>A</strong> pernah berkata “<em>Udahlah, objek <strong>X</strong> bloated, insecure, dan non-FLOSS. Pakai <strong>Y</strong> saja.</em>” dan sebagainya.</p>
+
+<p>Apakah itu dapat dianggap suatu perilaku pemaksaan? Belum tentu, itu bisa kita anggap sebagai tindakan persuasif yang harus kita olah sebijak mungkin dengan mencari tahu sumber referensi yang jelas dan tentunya sesuai kebutuhan setiap individu melalui berbagai riset.</p>
+
+<p>Sebelum lebih lanjut, saya tegaskan bahwa di bawah ini yang dimaksud sebuah sistem operasi <a href="https://www.gnu.org/gnu/linux-and-gnu.en.html">GNU/Linux</a> (atau sering disebut Linux) sebenarnya dikemas sebagai distribusi Linux. Lihat juga <a href="https://en.wikipedia.org/wiki/Linux_kernel">kernel Linux</a>.</p>
+
+<h2 id="linux-dan-elitisme-1">Linux dan Elitisme</h2>
+<p>“<strong>Linux dan Elitisme</strong>”. Apakah keduanya memiliki keterkaitan satu sama-lain? Mengapa begitu banyak pengguna sistem operasi Linux mempunyai sikap elitis? Memang, pada beberapa aspek pengguna sistem operasi Linux dapat disebut sebagai elit.</p>
+
+<ol>
+  <li>
+    <p>Berdasarkan data statistik dari <a href="https://gs.statcounter.com/os-market-share/desktop/worldwide">gs.statcounter.com</a>, kurang dari 2% di dunia yang menggunakan sistem operasi Linux di platform desktop, sedangkan jika disaring dalam semua platform mereka hanya kurang dari 1%. Itu adalah fakta bukan sekedar sebuah sikap saja. Android juga menggunakan mainstream kernel Linux, tetapi ditambahkan driver maupun fitur untuk perangkat spesifik sehingga dibedakan kategorinya. Biasanya driver/fitur tambahan tersebut akan diterapkan ke kernel Linux jika komunitas menyetujuinya dan memang mungkin untuk memodifikasinya.</p>
+  </li>
+  <li>
+    <p>Rata-rata mereka lebih terampil, menguasai dan memiliki pengetahuan mendalam mengenai komputer daripada pengguna sistem operasi lain karena seringnya mencari dan membaca serta mengolah informasi. Mayoritas dari mereka sadar akan seluk-beluk dalam sistem operasi yang jarang terdengar. Contohnya HFS (Hierarchical File System), init system, user-group permission, kernel, bootloader, package manager, process scheduling, desktop environment, dan masih banyak lagi.</p>
+  </li>
+  <li>
+    <p>Pada awalnya sistem operasi Linux banyak digunakan untuk keutamaan seperti kegiatan ilmiah <a href="https://www-d0.fnal.gov/">eksperimen DØ</a> yang menggunakan <a href="https://scientificlinux.org/">Scientific Linux</a>, server produksi, seorang penghobi, programmer/developer, engineer, pentester. Bahwa berarti pada awalnya Linux bukanlah untuk mayoritas konsumsi rumahan. Namun, sekarang sistem operasi Linux sudah berusaha dikembangkan secara pesat (karena <em>open-source</em>) untuk konsumsi publik yang lebih ramah pengguna.</p>
+  </li>
+  <li>
+    <p>Pengguna sistem operasi linux yang <a href="https://www.merriam-webster.com/dictionary/avid">AVID</a> biasanya tidak melihat <a href="https://id.wikipedia.org/wiki/Pragmatisme">pragmatisme</a> dari kebanyakan pengguna biasa. Mereka sangat terpesona dan penasaran sehingga ingin untuk mampu memodifikasi setiap hal kecil di sistem operasi yang mereka gunakan setiap harinya.</p>
+  </li>
+</ol>
+
+<p>Tidak semua pengguna komputer memenuhi beberapa aspek di atas. Dengan demikian, pengguna sistem operasi Linux dapat dianggap sebagai Elit dan memiliki hak untuk membedakan diri dari mayoritas pengguna komputer meskipun tidak dengan sombong. Namun, pada kenyataannya sikap elitisme adalah suatu kesalahpahaman yang besar. Itu sama sekali tidak memiliki keterkaitan dengan penggunaan sistem operasi Linux sama sekali, tetapi berasal dari ketidaksepakatan mendasar dengan pola pikir dan cara komputasi terhadap komputer modern.</p>
+
+<hr />
+
+<h2 id="opini">Opini</h2>
+<p>Jadi bagaimana pendapat saya tentang user sistem operasi lain? Ini sedikit mengejutkan, sebetulnya saya tidak berpikir bahwa pengguna sistem operasi lain benar-benar bodoh atau IQ-nya lebih rendah daripada pengguna sistem operasi Linux. Saya juga tidak berpikir bahwa pengguna sistem operasi Linux adalah seorang jenius yang hidup diantara orang-orang bodoh, walaupun terkadang kenyataannya begitu. Jika kita mau melihat pada data perkembangan IQ di masa lampau hingga masa kini, kita dapat memperhatikan bahwa rata-rata IQ meningkat pada setiap populasi manusia. Kita melihat bahwa literasi semakin meningkat, matematika yang kompleks menjadi lebih “<em>biasa</em>”, setiap orang memiliki <em>smartphone</em> dan punya akses ke hampir seluruh teknologi hanya dengan menggerakkan jari mereka.</p>
+
+<p>Fakta-fakta ini membuat saya ragu, bahwa apakah semua orang di luar pengguna sistem operasi Linux itu bodoh atau mempunyai IQ rendah. Jadi apa yang menyebabkan mereka tidak elit? <strong>Apatis</strong>, apatisme menjadi sangat biasa dan dinormalisir jika dibandingkan pada masa lalu, ini disebabkan oleh semua kemudahan yang bisa diakses oleh orang-orang sampai mereka tidak peduli tentang apapun, mereka tidak mau berusaha, mereka lebih memilih mencari dopamine, seperti film porno, sosial media, menggemari idola, video game, hingga sumber-sumber dopamine lainnya untuk menjadi santapan otak sehari-hari. Otak mereka sudah terlalu penuh untuk melakukan hal lainnya yang sedikit lebih sulit.</p>
+
+<h3 id="it-just-werks">It Just Werks</h3>
+
+<p>Saya menolak semua pernyataan “<em>yang penting bisa digunakan</em>”  dan menganggapnya sebagai kata-kata yang bodoh, yang diberikan seseorang ketika tidak mau repot-repot menggerakkan tubuh dan akal sehatnya. Bukan karena suka dengan sesuatu yang rumit, tetapi saya menginginkan agar sesuatu bekerja seperti apa yang saya harapkan. Sejujurnya, saya juga tidak ingin mereka menggunakan objek <strong>Y</strong> karena dipaksakan. Berusaha sekuat tenaga sebagai orang-orang yang hidup di realitas alternatif dari apa yang disebut <a href="https://id.wikipedia.org/wiki/Pembajakan_perangkat_lunak"><em>software piracy</em></a>, dan berusaha tidak peduli terhadap apapun selama itu disebut “<em>yang penting bisa dipakai</em>”.</p>
+
+<p>Ketika manusia telah memiliki <em>basic needs</em>, seperti tempat tinggal, air, dan makanan di perut mereka, mereka tidak lagi memikirkan cara bertahan hidup dan eksistensinya. Ketika mereka telah mencapai kenyamanan itu, tanpa <em>deeper meaning</em> atau <em>goal</em> untuk memicu mereka, mereka akan menjadi apatis. Apatisme inilah yang menyebabkan orang-orang berkata bahwa instalasi Linux itu sulit, padahal belum tentu sesulit itu. Tapi karena sekarang kita hidup di masa mesin-mesin OEM, dimana Cortana melakukan semuanya untuk pengguna setelah membelinya dari toko. Tapi yah memang benar bahwa sistem operasi Linux sedikit banyak lebih sulit dibandingkan dengan itu.</p>
+
+<h3 id="analogi">Analogi</h3>
+
+<p>Mari coba membayangkan, seumpama sistem operasi adalah mobil. Ada dua macam orang yang membeli mobil yang berbeda. Ayo sejenak berasumsi <em>performance</em> mobilnya sama (iya saya tahu bahwa Linux jauh memiliki <em>performance</em> yang lebih bagus daripada sistem operasi <strong>W</strong>, tapi mari anggap saja begitu dulu). Yang satu terus-terusan merekam obrolan pengguna, musik, makanan favorit, tujuan pergi dan semua datanya dikirim ke <em>dealer</em> untuk kepentingan penjualan (misalnya iklan). Dan juga, user tersebut tidak diperbolehkan mengganti komponen mobilnya, user tidak dapat memodifikasi mobil tersebut untuk memaksimalkan potensinya, jika ingin lebih maka harus membeli mobil baru. Sedangkan lawannya adalah sebuah mobil DIY (iya saya mengerti jika Linux belum tentu serumit itu, tapi mari anggap saja begitu terlebih dahulu), mobil tersebut bebas dimodifikasi, tanpa ada proses-proses yang membuat mobil tersebut menjadi lebih payah <em>performance-nya</em>.</p>
+
+<p>Jadi dari analogi diatas, sepertinya memang semakin memvalidasi elitisme pengguna sistem operasi Linux, mereka menggunakan OS yang elit, mereka berjam-jam melakukan konfigurasi OS. Dan yang terpenting, mereka <em>took action</em> dengan melalui itu semua. Tidak seperti pengguna sistem operasi lain yang terus-menerus hanya bisa disuapi. Tidak semua orang mempunyai <em>skill-set</em> itu, beberapa orang terbukti lebih <em>superior</em> daripada orang lain dan tidak semua orang adalah <em>equal</em> walapun mayoritas media hingga masyarakat kita mengatakan itu. Paham bahwa semua orang itu setara hanyalah opini juga, karena beberapa orang terbukti lebih baik dalam suatu hal tertentu atau bahkan dalam banyak hal sekaligus daripada orang lain.</p>
+
+<hr />
+
+<h2 id="epilog">Epilog</h2>
+<p>Apapun yang kita lakukan, jika hanya untuk menjadi “keren” atau “ikut-ikutan” tetapi sulit dalam menyesuaikan lingkungan. Sesungguhnya itu tidaklah keren, melainkan menyakiti diri sendiri. Marilah mencoba berbagai hal yang kita temui jika itu bermanfaat bagi individu masing-masing. Permasalahannya adalah seberapa banyak orang dapat meluangkan waktu mereka untuk melakukan hal-hal seperti itu dengan tepat dan cepat.</p>
+
+<hr />
+
+<h2 id="referensi">Referensi</h2>
+<ul>
+  <li><a href="https://www.linuxsec.org/2021/03/linux-dan-elitisme.html">www.linuxsec.org/2021/03/linux-dan-elitisme.html</a></li>
+  <li><a href="https://www.distrotube.com/blog/why-linux-users-have-elitist-attitude">www.distrotube.com/blog/why-linux-users-have-elitist-attitude</a></li>
+  <li><a href="https://www.youtube.com/watch?v=TxDFjGPqYog">www.youtube.com/watch?v=TxDFjGPqYog</a></li>
+</ul>]]></content><author><name></name></author><category term="teknologi" /><category term="salinan" /><summary type="html"><![CDATA[Linux dan Elitisme]]></summary></entry><entry><title type="html">Mengenal XMPP</title><link href="http://localhost:4000/mengenal-xmpp" rel="alternate" type="text/html" title="Mengenal XMPP" /><published>2022-07-19T00:00:00+07:00</published><updated>2022-07-19T00:00:00+07:00</updated><id>http://localhost:4000/mengenal-xmpp</id><content type="html" xml:base="http://localhost:4000/mengenal-xmpp"><![CDATA[<p>Setiap kali saya mengatakan bahwa XMPP adalah solusi <em>Instant Messaging</em> terbaik yang tersedia, seseorang berpendapat bahwa itu “terlalu sulit” atau “membingungkan” untuk digunakan oleh pengguna yang kurang mahir.</p>
+
+<p>Saya mencoba mencari panduan pengenalan untuk menggunakan XMPP yang dapat saya kirimkan kepada orang-orang yang bertanya kepada saya, tetapi saya hanya menemukan panduan tentang pengaturan server XMPP atau beberapa panduan yang dijelaskan dengan buruk, jadi saya memutuskan untuk menulis panduan sendiri sehingga rata-rata orang dapat menggunakan protokol XMPP tanpa komplikasi.</p>
+
+<h2 id="tapi-apa-itu-xmpp">Tapi, apa itu XMPP?</h2>
+
+<p>XMPP adalah standar untuk pesan instan. Sebenarnya, layanan IM propietary seperti Whatsapp berbasis pada protokol XMPP. Protokol ini dirancang untuk digunakan secara terdistribusi, di mana terdapat berbagai penyedia dan Anda dapat menggunakan salah satu yang paling Anda sukai. Hampir seperti email, Anda dapat mengobrol dengan orang yang menggunakan penyedia yang berbeda: Joe dapat mengirim email dari joe@gmail.com ke ed@outlook.com bahkan jika penyedia Joe (gmail) tidak sama dengan milik Ed (Outlook). XMPP bekerja dengan cara yang sama.</p>
+
+<p>Sifat jaringan XMPP yang terdistribusi ini memiliki banyak keuntungan. Misalnya, tidak ada satu titik kegagalan, jadi kebalikan dari apa yang terjadi dengan Whatsapp, jika server mati, sebagian besar jaringan akan tetap berjalan dan itu hanya akan mempengaruhi sebagian kecil. para pengguna.</p>
+
+<p>Ini juga memberi anda kebebasan untuk memilih penyedia yang anda inginkan dan yang anda percayai, anda tidak dipaksa untuk mempercayai perusahaan yang teduh (misalnya Facebook) untuk menyimpan percakapan kami. Anda memiliki kemungkinan menjadi penyedia Anda sendiri!</p>
+
+<h2 id="jadi-bagaimana-saya-mulai-menggunakan-xmpp">Jadi, bagaimana saya mulai menggunakan XMPP?</h2>
+
+<p>Nah, semudah membuat akun di penyedia preferensi Anda.</p>
+
+<h3 id="membuat-akun-xmpp">Membuat akun XMPP</h3>
+
+<p>Sama seperti email, dengan XMPP, kita dapat memilih di antara beberapa penyedia XMPP untuk membuat akun kita. Rekomendasi pribadi saya adalah Nixnet dan Disroot.</p>
+
+<p>Membuat akun semudah pergi ke penyedia pilihan Anda dan mengisi formulir web. Di XMPP ada fitur bagus dan Anda dapat mendaftar dari klien Anda! Tetapi Anda mungkin lebih terbiasa dengan formulir web, jadi gunakan itu jika Anda mau. Pilih nama pengguna Anda dan kata sandi yang kuat. Mungkin Anda diminta untuk menyelesaikan captcha. Itu saja, sekarang akun XMPP Anda seharusnya sudah siap. Mudah, bukan?</p>
+
+<p>Untuk masuk ke klien Anda dan membagikan pengguna XMPP Anda sehingga orang lain dapat menghubungi Anda, itu seperti email: user@domain.com. Misalnya, namasaya@contoh.org atau namaanda@xmpp.domain.com.</p>
+
+<h3 id="masuk-ke-klien-xmpp-anda">Masuk ke klien XMPP Anda</h3>
+
+<p>Sekarang Anda perlu mengunduh klien XMPP. Saya rasa sebagian besar dari Anda ingin menggunakan XMPP di ponsel Anda, tetapi Anda juga dapat menggunakannya di desktop. Jadi unduh klien tergantung pada OS Anda:</p>
+
+<ul>
+  <li>Untuk Android, Conversation adalah bagus. Anda dapat mengunduhnya dari F-Droid (<em>free software</em>, disarankan) atau dari Play Store (3,49 euro, tidak disarankan!).</li>
+  <li>Untuk iOS, Siskin IM adalah opsi yang populer. Anda dapat menemukannya di Apple Store.</li>
+  <li>Untuk desktop, rekomendasi saya adalah Gajim untuk GNU/Linux dan BSD. Untuk Windows dan macOS, meskipun Anda seharusnya tidak menggunakannya, rekomendasi saya adalah Gajim untuk Windows dan Beagle IM untuk macOS.</li>
+</ul>
+
+<p>Setelah Anda memiliki klien, yang harus Anda lakukan adalah masuk dengan akun yang Anda buat sebelumnya. Ingat bahwa formatnya seperti email, user@domain.org.</p>
+
+<h3 id="enkripsi">Enkripsi</h3>
+
+<p>Enkripsi sangat penting. XMPP mendukung beberapa metode enkripsi. Tapi kami akan fokus pada yang paling mudah: OMEMO.</p>
+
+<p>Mengaktifkan OMEMO sangat sederhana tetapi tergantung pada klien yang Anda gunakan. Norma umum yang baik adalah mencari ikon kunci dan mengkliknya, itu akan memberi Anda opsi untuk mengaktifkan OMEMO. Pada beberapa klien lain mungkin perlu menginstal plugin, misalnya di Gajim. Saya akan menjelaskan caranya.</p>
+
+<h4 id="omemo-di-gajim">OMEMO di Gajim</h4>
+
+<p>Di bilah utama di bagian atas jendela, buka Gajim &gt; Plugin. Daftar plugin yang tersedia akan muncul. Cari plugin bernama “OMEMO”, pilih dan klik tombol unduh di bawah. Ini akan meminta Anda untuk me-restart Gajim, restart. Setelah itu, ikon kunci akan muncul di setiap obrolan. Klik dan ingat untuk memilih OMEMO. Itu dia. Semuanya harus bekerja sekarang.</p>
+
+<h2 id="kesimpulan">Kesimpulan</h2>
+
+<p>Saya harap Anda menemukan panduan ini bermanfaat. Jika Anda memiliki pertanyaan, Anda selalu dapat menulis email kepada saya dan saya akan melakukan yang terbaik untuk membantu Anda.</p>
+
+<p>Saya ingin beberapa saran untuk menyempurnakan panduan ini. Niat saya adalah membuatnya sejelas mungkin bagi pengguna baru, jadi umpan balik apa pun dihargai.</p>]]></content><author><name></name></author><category term="teknologi" /><summary type="html"><![CDATA[Setiap kali saya mengatakan bahwa XMPP adalah solusi Instant Messaging terbaik yang tersedia, seseorang berpendapat bahwa itu “terlalu sulit” atau “membingungkan” untuk digunakan oleh pengguna yang kurang mahir.]]></summary></entry><entry><title type="html">Anda Tidak Butuh Komputer Terbaru</title><link href="http://localhost:4000/anda-tidak-butuh-komputer-terbaru" rel="alternate" type="text/html" title="Anda Tidak Butuh Komputer Terbaru" /><published>2022-07-17T00:00:00+07:00</published><updated>2022-07-17T00:00:00+07:00</updated><id>http://localhost:4000/anda-tidak-butuh-komputer-terbaru</id><content type="html" xml:base="http://localhost:4000/anda-tidak-butuh-komputer-terbaru"><![CDATA[<p>Saat ini hampir semua orang memiliki komputer. Hidup di dunia di mana konsumerisme berkuasa, alat penting seperti itu dalam hidup kita telah menciptakan pasar yang sangat menarik. Perusahaan mulai membuat komputer lebih sulit untuk diperbaiki ketika mereka menyadari bahwa rata-rata pengguna membeli komputer baru setiap kali bagian yang tidak penting dari laptop mereka rusak.</p>
+
+<p>Ini memiliki banyak konsekuensi, saya ingin memusatkan perhatian pada fakta-fakta berikut:</p>
+
+<ul>
+  <li>Komputer sekarang lebih sulit untuk diperbaiki daripada sebelumnya. Perusahaan mendapat untung ketika Anda membeli komputer baru sehingga mereka tidak ingin Anda memperbaiki perangkat keras Anda.</li>
+  <li>Ada kecenderungan yang meningkat untuk membuat komputer semakin tidak tahan lama. Bagi perusahaan, lebih menguntungkan untuk membangun produk berkualitas rendah yang akan bertahan lebih sedikit. Dengan begitu mereka memastikan bahwa Anda akan terus membeli produk baru. Lebih jauh lagi, mereka membuat perangkat keras mereka dengan masa manfaat yang terbatas. Ini dikenal sebagai keusangan terprogram dan ini merupakan masalah besar bagi konsumen. Keusangan yang direncanakan bekerja lebih baik dalam oligopoli di mana 3-4 korps mengendalikan pasar. Dan ya, ini terjadi sekarang.</li>
+  <li>Memproduksi sampah elektronik dalam jumlah besar sangat berbahaya bagi planet kita.</li>
+</ul>
+
+<h2 id="komputer-baru-lebih-rapuh">Komputer baru lebih rapuh</h2>
+
+<p>Seperti yang saya nyatakan sebelumnya, lebih baik bagi perusahaan untuk membuat komputer tidak mungkin diperbaiki atau kurang tahan lama sehingga mereka akan menjual yang lain kepada Anda. Dan jika memungkinkan, yang lebih mahal memasarkannya sebagai “lebih tahan lama” atau sebagai “teknologi generasi berikutnya”.</p>
+
+<p>Apple mungkin menjadi perusahaan terburuk dalam aspek ini. Setiap produk Apple sengaja dibuat untuk membuatnya sulit untuk diperbaiki, bahkan jika itu adalah masalah yang sangat sederhana, yang akan dengan mudah diperbaiki dalam produk yang lebih etis. Mereka bahkan menggunakan sekrup khusus, hanya untuk memastikan bahwa orang normal tidak dapat membuka perangkat mereka dengan obeng biasa. Jika pihak ketiga ingin secara resmi memperbaiki perangkat keras mereka yang menjijikkan, pihak ketiga ini harus membayar lisensi yang sangat mahal kepada Apple. Sekarang setiap pabrikan lain meniru teknik mengerikan Apple.</p>
+
+<h2 id="membeli-perangkat-keras-baru-merusak-lingkungan-kita">Membeli perangkat keras baru merusak lingkungan kita</h2>
+
+<p>Mereka membuat terlalu banyak limbah elektronik. Ini adalah masalah yang diketahui oleh semua orang, tetapi seringkali kita tidak menyadari betapa pentingnya itu dan bahwa kita harus menghentikannya sekarang. Lebih dari 50 juta ton sampah diproduksi setiap tahun. Dan ini hanya semakin buruk.</p>
+
+<p>Menggunakan komputer Anda (yang relatif lama) membantu menjaga limbah ini keluar dari lingkungan. Ini juga membantu melestarikan sumber daya alam.</p>
+
+<h2 id="komputer-modern-adalah-perangkat-pemantauan">Komputer modern adalah perangkat pemantauan</h2>
+
+<p>Tampaknya masalah ini sudah diketahui oleh orang-orang IT. Tetapi rata-rata pengguna tidak tahu atau tidak menganggap penting masalah yang bert ini. Pengawasan besar-besaran adalah pelanggaran hak asasi manusia yang tidak ditampilkan di saluran berita mana pun.</p>
+
+<p>Bahkan jika Anda menyingkirkan Micro$oft Window$ dan Anda menginstal sistem operasi <em>free software</em> favorit Anda, Anda akan tetap dimata-matai oleh megacorps dan pemerintah.</p>
+
+<h3 id="bagaimana-ini-mungkin">Bagaimana ini mungkin?</h3>
+
+<p>Tentu saja ini mungkin. Selain terus-menerus dilacak saat Anda menjelajahi web, masalahnya jauh lebih dalam dari itu.</p>
+
+<p>Setiap prosesor Intel sejak tahun 2008 telah menyertakan subsistem otonom di dalam prosesor Anda, yang sering dikenal sebagai Intel ME. Saya harus mengatakan bahwa AMD memiliki hal yang sama persis di mesin mereka tetapi mereka menyebutnya dengan cara yang berbeda (AMD PSP)</p>
+
+<p>Subsistem ini dapat membaca memori Anda dan terhubung ke internet. Ini, pada dasarnya, adalah <em>backdoor</em> permanen. Di beberapa komputer lama Anda dapat menghapus prosesor lain ini dan mengganti BIOS <em>proprietary</em> di PC Anda dengan Libreboot.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Libreboot adalah firmware boot yang menghargai kebebasan, menginisialisasi perangkat keras dan mem-boot sistem operasi. 
+Ini menggantikan firmware boot BIOS/UEFI yang ditemukan di komputer.
+</code></pre></div></div>
+
+<h2 id="jadi-apakah-anda-benar-benar-membutuhkan-komputer-modern">Jadi, apakah Anda benar-benar membutuhkan komputer modern?</h2>
+
+<p>Saya kira tidak demikian. Dan saya berjanji kepada Anda bahwa Anda mungkin tidak membutuhkannya. IMO lebih dari 90% orang dapat menggunakan komputer dari tahun 2008 atau sebelumnya dengan pengalaman pengguna yang menyenangkan. Kebutuhan akan mesin yang lebih baru hanya untuk orang-orang yang melakukan perangkat keras profesional yang menuntut pengeditan video, mengkompilasi sistem operasi besar atau program besar terus-menerus, atau menggunakan program yang <em>bloated</em>.</p>
+
+<p>Jika semua yang Anda lakukan di komputer adalah menonton video di internet, menjelajahi beberapa situs, dan menggunakan pengolah kata, maka Anda tidak perlu menggunakan perangkat keras terbaru.</p>
+
+<p>Aku tahu apa yang akan kamu katakan. “Laptop saya berjalan lambat”. Itu masalah Windows. Teman kita Micro$oft, yang mendapat untung dari setiap penjualan laptop karena produsen perlu membeli lisensi Windows, membuat Windows semakin berat dengan setiap pembaruan. Hal ini membuat komputer lambat dan memaksa pengguna untuk membeli perangkat keras baru secara berkala bahkan jika mesin mereka akan bekerja dengan sempurna dengan OS yang sebenarnya dan bukan dengan omong kosong Microsoft.</p>
+
+<h2 id="kesimpulan">Kesimpulan</h2>
+
+<p>Anda tidak memerlukan komputer baru. Saya menggunakan laptop yang berusia lebih dari satu dekade sebagai mesin saya sehari-hari. Anda dapat terus menggunakan laptop lama Anda tanpa masalah. Jangan terjerumus ke dalam konsumerisme, itu yang mereka inginkan.</p>]]></content><author><name></name></author><category term="teknologi" /><summary type="html"><![CDATA[Saat ini hampir semua orang memiliki komputer. Hidup di dunia di mana konsumerisme berkuasa, alat penting seperti itu dalam hidup kita telah menciptakan pasar yang sangat menarik. Perusahaan mulai membuat komputer lebih sulit untuk diperbaiki ketika mereka menyadari bahwa rata-rata pengguna membeli komputer baru setiap kali bagian yang tidak penting dari laptop mereka rusak.]]></summary></entry></feed>

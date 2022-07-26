@@ -1,0 +1,26 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ site.descriptopn }}">
+    <meta name="keywords" content="Autonomy">
+    <meta name="author" content="{{ site.name }}" />
+
+   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+
+   {% if site.tags != "" %}	
+   {% include collecttags.html %}
+   {% endif %}
+
+    {% if page.layout == 'post' %}
+    <title>{{ page.title }} - autonomy</title>
+    {% else %}
+    <title>autonomy</title>
+    {% endif %}
+    
+    {% feed_meta %}
+
+    {% if page.mermaid %}
+  {% include mermaid.html %}
+    {% endif %}
+    
+	  </head>
