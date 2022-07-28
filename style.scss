@@ -120,7 +120,7 @@ nav {
     }
 
     a:hover {
-        background: $green;
+        background: #56c8ff;
         text-decoration: none;
     }
 
@@ -168,9 +168,11 @@ nav.right {
     padding: 0 1em;
 }
 
-.home {
+/* .home {
     padding-top: 0.75em;
 }
+
+*/
 
 .home li,
 .archive .post-list li {
@@ -332,7 +334,7 @@ article {
     hr {
         border: 0;
         height: 0;
-        border-bottom: 1px solid $silver;
+        border-bottom: 1px solid #333;
     }
 }
 

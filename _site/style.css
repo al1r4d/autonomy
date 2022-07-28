@@ -128,7 +128,7 @@ nav a {
 }
 
 nav a:hover {
-  background: #7E9F5B;
+  background: #56c8ff;
   text-decoration: none;
 }
 
@@ -172,10 +172,11 @@ nav li .current {
   padding: 0 1em;
 }
 
-.home {
-  padding-top: 0.75em;
+/* .home {
+    padding-top: 0.75em;
 }
 
+*/
 .home li,
 .archive .post-list li {
   list-style: none;
@@ -339,7 +340,7 @@ article ol {
 article hr {
   border: 0;
   height: 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #333;
 }
 
 @media screen and (max-width: 640px) {
