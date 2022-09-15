@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-28T19:26:00+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">autonomy</title><subtitle>untuk semua</subtitle><entry><title type="html">Linux dan Elitisme</title><link href="http://localhost:4000/linux-dan-elitisme" rel="alternate" type="text/html" title="Linux dan Elitisme" /><published>2022-07-25T00:00:00+07:00</published><updated>2022-07-25T00:00:00+07:00</updated><id>http://localhost:4000/linux-dan-elitisme</id><content type="html" xml:base="http://localhost:4000/linux-dan-elitisme"><![CDATA[<h1 id="linux-dan-elitisme">Linux dan Elitisme</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-15T21:23:30+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">autonomy</title><subtitle>untuk semua</subtitle><entry><title type="html">Menyusun Kernel Linux Dengan Clang LTO</title><link href="http://localhost:4000/membangun-kernel-linux-dengan-clang-lto" rel="alternate" type="text/html" title="Menyusun Kernel Linux Dengan Clang LTO" /><published>2022-09-15T00:00:00+07:00</published><updated>2022-09-15T00:00:00+07:00</updated><id>http://localhost:4000/membangun-kernel-linux-dengan-clang-lto</id><content type="html" xml:base="http://localhost:4000/membangun-kernel-linux-dengan-clang-lto"><![CDATA[<h2 id="apa-itu-clang-dan-lto">Apa Itu Clang dan LTO?</h2>
+<p>Clang adalah program <em>compiler</em> bahasa C yang mengutamakan kecepatan penyusunan dan penggunaan memori yang rendah. LLVM Developer Group adalah developer di balik program ini.</p>
+
+<p>LTO atau <em>Link Time Optimization</em> adalah cara untuk mengoptimasi suatu program. Lebih lanjut bisa dibaca di artikel <a href="https://llvm.org/docs/LinkTimeOptimization.html">LLVM Link Time Optimization: Design and Implementation</a>.</p>
+<h2 id="memasang-clang">Memasang Clang</h2>
+<p>Pastikan program Clang telah terinstall. Jika belum, unduhlah terlebih dahulu. Cara di bawah bisa anda lakukan jika berada di distribusi Debian dan turunannya.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># apt install clang</span>
+</code></pre></div></div>
+<h2 id="mengaktifkan-lto-pada-kernel-linux">Mengaktifkan LTO pada Kernel Linux</h2>
+<p>Menggunakan <em>Link Time Optimization</em> sewaktu membangun kernel Linux sangatlah mudah. Nyalakan skrip LTO dengan perintah di bawah.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /usr/src/linux</span>
+root /usr/src/linux <span class="c"># scripts/config -e LTO_CLANG</span>
+</code></pre></div></div>
+<p>Setelah itu, jalankan <code class="language-plaintext highlighter-rouge">menuconfig</code>. Kemudian buka menu <code class="language-plaintext highlighter-rouge">General Architecture</code> dan aktifkan <code class="language-plaintext highlighter-rouge">Strong Stack Protector</code>. Pilihlah LTO mana yang anda suka.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root /usr/src/linux <span class="c"># make CC=clang LLVM=1 menuconfig</span>
+</code></pre></div></div>
+
+<p><img src="/media/clang/lto.png" alt="" /></p>
+
+<p>Jika dirasa cukup, kompilasi dilakukan dengan cara</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root /usr/src/linux <span class="c"># make CC=clang LLVM=1 -j4 -l8</span>
+root /usr/src/linux <span class="c"># make CC=clang LLVM=1 modules_install</span>
+root /usr/src/linux <span class="c"># make CC=clang LLVM=1 install</span>
+</code></pre></div></div>
+
+<p>Selesai.</p>]]></content><author><name></name></author><category term="teknologi" /><summary type="html"><![CDATA[Apa Itu Clang dan LTO? Clang adalah program compiler bahasa C yang mengutamakan kecepatan penyusunan dan penggunaan memori yang rendah. LLVM Developer Group adalah developer di balik program ini.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/media/clang/clang.jpg" /><media:content medium="image" url="http://localhost:4000/media/clang/clang.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Linux dan Elitisme</title><link href="http://localhost:4000/linux-dan-elitisme" rel="alternate" type="text/html" title="Linux dan Elitisme" /><published>2022-07-25T00:00:00+07:00</published><updated>2022-07-25T00:00:00+07:00</updated><id>http://localhost:4000/linux-dan-elitisme</id><content type="html" xml:base="http://localhost:4000/linux-dan-elitisme"><![CDATA[<h1 id="linux-dan-elitisme">Linux dan Elitisme</h1>
 
 <p>Ada sebuah anggapan di lingkup pengguna komputer bahwa GNU/Linux user mempunyai sikap elitis dan berpikir bahwa mereka lebih baik daripada orang lain yang tidak menggunakan distro GNU/Linux. Untuk mengetahui apakah seseorang itu elitis atau tidak, ada kriteria yang perlu kita perhatikan tentang bagaimana user ini beropini tentang dirinya sendiri dan user lainnya.</p>
 

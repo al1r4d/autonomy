@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Menyusun Kernel Linux Dengan Clang LTO",
+      "category" : "",
+      "tags"     : "teknologi",
+	"url"      : "/membangun-kernel-linux-dengan-clang-lto",
+	"date"     : "2022-09-15 00:00:00 +0700"
+	
+    } ,
+  
+    {
       "title"    : "Linux dan Elitisme",
       "category" : "",
       "tags"     : "teknologi, salinan",

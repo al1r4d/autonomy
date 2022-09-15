@@ -1,0 +1,16 @@
+I"H<h2 id="apa-itu-clang-dan-lto">Apa Itu Clang dan LTO?</h2>
+<p>Clang adalah program <em>compiler</em> bahasa C yang mengutamakan kecepatan penyusunan dan penggunaan memori yang rendah. LLVM Developer Group adalah developer di balik program ini.</p>
+<h2 id="memasang-clang">Memasang Clang</h2>
+<p>Pastikan program Clang telah terinstall. Jika belum, unduhlah terlebih dahulu. Cara di bawah bisa anda lakukan jika berada di distribusi Debian dan turunannya.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># apt install clang</span>
+</code></pre></div></div>
+<h2 id="mengaktifkan-lto-pada-kernel-linux">Mengaktifkan LTO pada Kernel Linux</h2>
+<p>Menggunakan <em>Link Time Optimization</em> sewaktu membangun kernel Linux sangatlah mudah. Nyalakan skrip LTO dengan perintah di bawah.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /usr/src/linux</span>
+root /usr/src/linux <span class="c"># scripts/config -e LTO_CLANG</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root /usr/src/linux <span class="c"># make CC=clang LLVM=1 menuconfig</span>
+</code></pre></div></div>
+<p><img src="/media/clang/lto.png" alt="" /></p>
+:ET

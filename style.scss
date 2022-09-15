@@ -367,7 +367,7 @@ article,
     .date, .span {
         display: table-cell;
         @include mobile {
-            display: table;
+            display: table-cell;
         }
     }
 

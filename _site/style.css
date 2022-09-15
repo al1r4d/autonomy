@@ -368,7 +368,7 @@ article hr {
 
 @media screen and (max-width: 640px) {
   .home .date, .home .span, .post-list .date, .post-list .span {
-    display: table;
+    display: table-cell;
   }
 }
 

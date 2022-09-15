@@ -8,14 +8,12 @@ layout: default
 </script>
 <section class="home">
 
-<div class="flex-container">
 <div style="margin-left: -7px;">
-<h2>🔍 Pencarian</h2>
-<input type="text" id="search-input" placeholder="Kolom Pencarian">
+<input type="text" id="search-input" style="width:100%;color:var(--text);background-color:var(--bg);border: 1px solid #333; padding: .7em .5em;" placeholder="Kolom Pencarian" autofocus="">
 <ul id="results-container"></ul>
 
 
-	<h2> 📝 Postingan</h2>
+	
 		<ul>
 			{% for post in paginator.posts limit:5 %}
             <li>

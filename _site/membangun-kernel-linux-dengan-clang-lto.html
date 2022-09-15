@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="Autonomy">
+    <meta name="author" content="autonomy" />
+
+   <link rel="stylesheet" type="text/css" href="/style.css" />
+
+   	
+   
+
+
+
+
+
+
+
+   
+
+    
+    <title>Menyusun Kernel Linux Dengan Clang LTO - autonomy</title>
+    
+    
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="autonomy" />
+
+    
+    
+	  </head>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Menyusun Kernel Linux Dengan Clang LTO | autonomy</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Menyusun Kernel Linux Dengan Clang LTO" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Apa Itu Clang dan LTO? Clang adalah program compiler bahasa C yang mengutamakan kecepatan penyusunan dan penggunaan memori yang rendah. LLVM Developer Group adalah developer di balik program ini." />
+<meta property="og:description" content="Apa Itu Clang dan LTO? Clang adalah program compiler bahasa C yang mengutamakan kecepatan penyusunan dan penggunaan memori yang rendah. LLVM Developer Group adalah developer di balik program ini." />
+<link rel="canonical" href="http://localhost:4000/membangun-kernel-linux-dengan-clang-lto" />
+<meta property="og:url" content="http://localhost:4000/membangun-kernel-linux-dengan-clang-lto" />
+<meta property="og:site_name" content="autonomy" />
+<meta property="og:image" content="http://localhost:4000/media/clang/clang.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-15T00:00:00+07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/clang/clang.jpg" />
+<meta property="twitter:title" content="Menyusun Kernel Linux Dengan Clang LTO" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-15T00:00:00+07:00","datePublished":"2022-09-15T00:00:00+07:00","description":"Apa Itu Clang dan LTO? Clang adalah program compiler bahasa C yang mengutamakan kecepatan penyusunan dan penggunaan memori yang rendah. LLVM Developer Group adalah developer di balik program ini.","headline":"Menyusun Kernel Linux Dengan Clang LTO","image":"http://localhost:4000/media/clang/clang.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/membangun-kernel-linux-dengan-clang-lto"},"url":"http://localhost:4000/membangun-kernel-linux-dengan-clang-lto"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- Needed for the "current" class -->
+
+
+<header>
+
+        <!-- NEWSLINE -->
+<div id="newsline" class="newsline-false noselect">
+
+    <center><p><b></b></p></center>
+</div>
+
+      
+      
+
+<div class="wrapper">
+	
+	<h1 class="left"><a href="/" style="color:#56c8ff">Auto</a><a href="/">nomy</a><a class="span" href="#"></a></h1>
+
+		<nav class="right">
+		
+	<ul>
+		<b>
+		<li><a href="https://mstdn.io/@al1r4d">Mastodon</a></li>
+			<li><a href="mailto:al1r4d@riseup.net">Mail</a></li>
+		<li><a href="/feed.xml">Feeds</a></li> 
+		</b>
+	</ul>
+        
+		</nav> 
+
+
+        <div style="clear:both;"></div>
+
+    </div>
+
+</header>
+
+<main class="page-content">
+            <div class="container">
+    <div class="container-edge-border">
+      </div>
+<!-- Script pointing to search-script.js -->
+<script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt MIT
+// @license-end
+</script>
+
+<article class="post">
+    <h2> Menyusun Kernel Linux Dengan Clang LTO </h2>
+    <div class="date">15 September 2022 </div>
+<div>
+  <div>
+    <span><svg class="article-tag-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+        <line x1="7" y1="7" x2="7" y2="7"></line>
+      </svg> 
+  
+    
+ <a href="/tag/teknologi">#teknologi</a>
+  
+</span>
+
+
+    </div>
+	<ul><li><a href="#apa-itu-clang-dan-lto">Apa Itu Clang dan LTO?</a></li><li><a href="#memasang-clang">Memasang Clang</a></li><li><a href="#mengaktifkan-lto-pada-kernel-linux">Mengaktifkan LTO pada Kernel Linux</a></li></ul> 
+
+	  
+
+             
+            <img class="featured-image img-fluid" src="/media/clang/clang.jpg" alt="Menyusun Kernel Linux Dengan Clang LTO">
+            
+
+<p><h2 id="apa-itu-clang-dan-lto">Apa Itu Clang dan LTO?</h2>
+<p>Clang adalah program <em>compiler</em> bahasa C yang mengutamakan kecepatan penyusunan dan penggunaan memori yang rendah. LLVM Developer Group adalah developer di balik program ini.</p>
+
+<p>LTO atau <em>Link Time Optimization</em> adalah cara untuk mengoptimasi suatu program. Lebih lanjut bisa dibaca di artikel <a href="https://llvm.org/docs/LinkTimeOptimization.html">LLVM Link Time Optimization: Design and Implementation</a>.</p>
+<h2 id="memasang-clang">Memasang Clang</h2>
+<p>Pastikan program Clang telah terinstall. Jika belum, unduhlah terlebih dahulu. Cara di bawah bisa anda lakukan jika berada di distribusi Debian dan turunannya.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># apt install clang</span>
+</code></pre></div></div>
+<h2 id="mengaktifkan-lto-pada-kernel-linux">Mengaktifkan LTO pada Kernel Linux</h2>
+<p>Menggunakan <em>Link Time Optimization</em> sewaktu membangun kernel Linux sangatlah mudah. Nyalakan skrip LTO dengan perintah di bawah.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /usr/src/linux</span>
+root /usr/src/linux <span class="c"># scripts/config -e LTO_CLANG</span>
+</code></pre></div></div>
+<p>Setelah itu, jalankan <code class="language-plaintext highlighter-rouge">menuconfig</code>. Kemudian buka menu <code class="language-plaintext highlighter-rouge">General Architecture</code> dan aktifkan <code class="language-plaintext highlighter-rouge">Strong Stack Protector</code>. Pilihlah LTO mana yang anda suka.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root /usr/src/linux <span class="c"># make CC=clang LLVM=1 menuconfig</span>
+</code></pre></div></div>
+
+<p><img src="/media/clang/lto.png" alt="" /></p>
+
+<p>Jika dirasa cukup, kompilasi dilakukan dengan cara</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root /usr/src/linux <span class="c"># make CC=clang LLVM=1 -j4 -l8</span>
+root /usr/src/linux <span class="c"># make CC=clang LLVM=1 modules_install</span>
+root /usr/src/linux <span class="c"># make CC=clang LLVM=1 install</span>
+</code></pre></div></div>
+
+<p>Selesai.</p>
+</p>
+</article>
+<hr>
+
+
+<h1 style="color:#56c8ff">Komentar</h1>
+<p>Kirim komentar anda ke <a href="mailto:al1r4d@riseup.net">email</a> dengan subjek judul postingan ini.</p>
+
+
+    
+    
+        
+            
+                
+                <h1 style="color:#56c8ff">Pos Berkaitan</h1>
+                <ul>
+                
+                <li class="relatedPost">
+                    <a href="/linux-dan-elitisme">Linux dan Elitisme
+                    
+                    </a>
+                </li>
+                
+                
+            
+        
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+                
+                <li class="relatedPost">
+                    <a href="/mengenal-xmpp">Mengenal XMPP
+                    
+                    </a>
+                </li>
+                
+                
+            
+        
+    
+
+    
+    
+        
+            
+                
+                <li class="relatedPost">
+                    <a href="/anda-tidak-butuh-komputer-terbaru">Anda Tidak Butuh Komputer Terbaru
+                    
+                    </a>
+                </li>
+                
+                
+            
+        
+    
+
+
+    </ul>
+
+
+
+        </main><footer>
+  <center>
+	  <!--
+    <div>
+      <marquee direction="right">
+      <img src="/media/propaganda/linux.gif"></img>
+      <img src="/media/propaganda/getmozilla2.gif"></img>
+      <img src="/media/propaganda/gnu.png"></img>
+      <img src="/media/propaganda/emacs.gif"></img>
+      <img src="/media/propaganda/firefox.gif"></img>
+      <img src="/media/propaganda/mastodon.gif"></img>
+      <img src="/media/propaganda/chrmevil.gif"></img>
+      <img src="/media/propaganda/google_stand.gif"></img>
+      <img src="/media/propaganda/drm.gif"></img>
+    </div>
+    </marquee>
+	  --> 
+</footer>
+	
+</body>
+</html>
