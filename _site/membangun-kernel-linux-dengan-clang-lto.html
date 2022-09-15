@@ -52,26 +52,19 @@
 
 
 <header>
-
-        <!-- NEWSLINE -->
-<div id="newsline" class="newsline-false noselect">
-
-    <center><p><b></b></p></center>
-</div>
-
-      
-      
+     
 
 <div class="wrapper">
 	
-	<h1 class="left"><a href="/" style="color:#56c8ff">Auto</a><a href="/">nomy</a><a class="span" href="#"></a></h1>
+	<h1 class="left"><a href="/" style="color:#7e9f5b">Auto</a><a href="/">nomy</a><a class="span" href="#"></a></h1>
 
 		<nav class="right">
 		
 	<ul>
 		<b>
-		<li><a href="https://mstdn.io/@al1r4d">Mastodon</a></li>
-			<li><a href="mailto:al1r4d@riseup.net">Mail</a></li>
+		<!-- <li><a href="https://mstdn.io/@al1r4d">Mastodon</a></li>
+			<li><a href="mailto:al1r4d@riseup.net">Mail</a></li> --!>
+		<li><a href="/tentang">Tentang</a></li>
 		<li><a href="/feed.xml">Feeds</a></li> 
 		</b>
 	</ul>
@@ -112,7 +105,7 @@
 
 
     </div>
-	<ul><li><a href="#apa-itu-clang-dan-lto">Apa Itu Clang dan LTO?</a></li><li><a href="#memasang-clang">Memasang Clang</a></li><li><a href="#mengaktifkan-lto-pada-kernel-linux">Mengaktifkan LTO pada Kernel Linux</a></li></ul> 
+	<ul><li><a href="#apa-itu-clang-dan-lto">Apa Itu Clang dan LTO?</a></li><li><a href="#membangun-linux-dengan-clang">Membangun Linux Dengan Clang</a><ul><li><a href="#memasang-clang">Memasang Clang</a></li><li><a href="#mengaktifkan-lto-pada-kernel-linux">Mengaktifkan LTO pada Kernel Linux</a></li></ul></li></ul> 
 
 	  
 
@@ -124,11 +117,16 @@
 <p>Clang adalah program <em>compiler</em> bahasa C yang mengutamakan kecepatan penyusunan dan penggunaan memori yang rendah. LLVM Developer Group adalah developer di balik program ini.</p>
 
 <p>LTO atau <em>Link Time Optimization</em> adalah cara untuk mengoptimasi suatu program. Lebih lanjut bisa dibaca di artikel <a href="https://llvm.org/docs/LinkTimeOptimization.html">LLVM Link Time Optimization: Design and Implementation</a>.</p>
-<h2 id="memasang-clang">Memasang Clang</h2>
+
+<h2 id="membangun-linux-dengan-clang">Membangun Linux Dengan Clang</h2>
+<p>Sebelum itu pastikan anda sudah mengatur konfigurasi kernel dengan benar. Disini saya tidak mengajarkan anda secara lengkap cara mengatur konfigurasi (.config file).</p>
+
+<h3 id="memasang-clang">Memasang Clang</h3>
 <p>Pastikan program Clang telah terinstall. Jika belum, unduhlah terlebih dahulu. Cara di bawah bisa anda lakukan jika berada di distribusi Debian dan turunannya.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># apt install clang</span>
 </code></pre></div></div>
-<h2 id="mengaktifkan-lto-pada-kernel-linux">Mengaktifkan LTO pada Kernel Linux</h2>
+
+<h3 id="mengaktifkan-lto-pada-kernel-linux">Mengaktifkan LTO pada Kernel Linux</h3>
 <p>Menggunakan <em>Link Time Optimization</em> sewaktu membangun kernel Linux sangatlah mudah. Nyalakan skrip LTO dengan perintah di bawah.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /usr/src/linux</span>
 root /usr/src/linux <span class="c"># scripts/config -e LTO_CLANG</span>
@@ -151,7 +149,7 @@ root /usr/src/linux <span class="c"># make CC=clang LLVM=1 install</span>
 <hr>
 
 
-<h1 style="color:#56c8ff">Komentar</h1>
+<h1 style="color:#7e9f5b">Komentar</h1>
 <p>Kirim komentar anda ke <a href="mailto:al1r4d@riseup.net">email</a> dengan subjek judul postingan ini.</p>
 
 
@@ -160,7 +158,7 @@ root /usr/src/linux <span class="c"># make CC=clang LLVM=1 install</span>
         
             
                 
-                <h1 style="color:#56c8ff">Pos Berkaitan</h1>
+                <h1 style="color:#7e9f5b">Pos Berkaitan</h1>
                 <ul>
                 
                 <li class="relatedPost">

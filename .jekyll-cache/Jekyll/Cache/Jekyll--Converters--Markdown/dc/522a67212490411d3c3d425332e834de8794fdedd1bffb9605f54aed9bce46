@@ -1,0 +1,29 @@
+I"Ý	<h2 id="apa-itu-clang-dan-lto">Apa Itu Clang dan LTO?</h2>
+<p>Clang adalah program <em>compiler</em> bahasa C yang mengutamakan kecepatan penyusunan dan penggunaan memori yang rendah. LLVM Developer Group adalah developer di balik program ini.</p>
+
+<p>LTO atau <em>Link Time Optimization</em> adalah cara untuk mengoptimasi suatu program. Lebih lanjut bisa dibaca di artikel <a href="https://llvm.org/docs/LinkTimeOptimization.html">LLVM Link Time Optimization: Design and Implementation</a>.</p>
+<h2 id="memasang-clang">Memasang Clang</h2>
+<p>Pastikan program Clang telah terinstall. Jika belum, unduhlah terlebih dahulu. Cara di bawah bisa anda lakukan jika berada di distribusi Debian dan turunannya.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># apt install clang</span>
+</code></pre></div></div>
+
+<p>Sebelum itu pastikan anda sudah mengatur konfigurasi kernel dengan benar. Disini saya tidak mengajarkan anda secara lengkap cara mengatur konfigurasi (.config).</p>
+<h2 id="mengaktifkan-lto-pada-kernel-linux">Mengaktifkan LTO pada Kernel Linux</h2>
+<p>Menggunakan <em>Link Time Optimization</em> sewaktu membangun kernel Linux sangatlah mudah. Nyalakan skrip LTO dengan perintah di bawah.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /usr/src/linux</span>
+root /usr/src/linux <span class="c"># scripts/config -e LTO_CLANG</span>
+</code></pre></div></div>
+<p>Setelah itu, jalankan <code class="language-plaintext highlighter-rouge">menuconfig</code>. Kemudian buka menu <code class="language-plaintext highlighter-rouge">General Architecture</code> dan aktifkan <code class="language-plaintext highlighter-rouge">Strong Stack Protector</code>. Pilihlah LTO mana yang anda suka.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root /usr/src/linux <span class="c"># make CC=clang LLVM=1 menuconfig</span>
+</code></pre></div></div>
+
+<p><img src="/media/clang/lto.png" alt="" /></p>
+
+<p>Jika dirasa cukup, kompilasi dilakukan dengan cara</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root /usr/src/linux <span class="c"># make CC=clang LLVM=1 -j4 -l8</span>
+root /usr/src/linux <span class="c"># make CC=clang LLVM=1 modules_install</span>
+root /usr/src/linux <span class="c"># make CC=clang LLVM=1 install</span>
+</code></pre></div></div>
+
+<p>Selesai.</p>
+:ET

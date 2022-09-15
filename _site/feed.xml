@@ -1,12 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-15T21:35:29+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">autonomy</title><subtitle>untuk semua</subtitle><entry><title type="html">Menyusun Kernel Linux Dengan Clang LTO</title><link href="http://localhost:4000/membangun-kernel-linux-dengan-clang-lto" rel="alternate" type="text/html" title="Menyusun Kernel Linux Dengan Clang LTO" /><published>2022-09-15T00:00:00+07:00</published><updated>2022-09-15T00:00:00+07:00</updated><id>http://localhost:4000/membangun-kernel-linux-dengan-clang-lto</id><content type="html" xml:base="http://localhost:4000/membangun-kernel-linux-dengan-clang-lto"><![CDATA[<h2 id="apa-itu-clang-dan-lto">Apa Itu Clang dan LTO?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-15T22:20:02+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">autonomy</title><subtitle>untuk semua</subtitle><entry><title type="html">Menyusun Kernel Linux Dengan Clang LTO</title><link href="http://localhost:4000/membangun-kernel-linux-dengan-clang-lto" rel="alternate" type="text/html" title="Menyusun Kernel Linux Dengan Clang LTO" /><published>2022-09-15T00:00:00+07:00</published><updated>2022-09-15T00:00:00+07:00</updated><id>http://localhost:4000/membangun-kernel-linux-dengan-clang-lto</id><content type="html" xml:base="http://localhost:4000/membangun-kernel-linux-dengan-clang-lto"><![CDATA[<h2 id="apa-itu-clang-dan-lto">Apa Itu Clang dan LTO?</h2>
 <p>Clang adalah program <em>compiler</em> bahasa C yang mengutamakan kecepatan penyusunan dan penggunaan memori yang rendah. LLVM Developer Group adalah developer di balik program ini.</p>
 
 <p>LTO atau <em>Link Time Optimization</em> adalah cara untuk mengoptimasi suatu program. Lebih lanjut bisa dibaca di artikel <a href="https://llvm.org/docs/LinkTimeOptimization.html">LLVM Link Time Optimization: Design and Implementation</a>.</p>
-<h2 id="memasang-clang">Memasang Clang</h2>
+
+<h2 id="membangun-linux-dengan-clang">Membangun Linux Dengan Clang</h2>
+<p>Sebelum itu pastikan anda sudah mengatur konfigurasi kernel dengan benar. Disini saya tidak mengajarkan anda secara lengkap cara mengatur konfigurasi (.config file).</p>
+
+<h3 id="memasang-clang">Memasang Clang</h3>
 <p>Pastikan program Clang telah terinstall. Jika belum, unduhlah terlebih dahulu. Cara di bawah bisa anda lakukan jika berada di distribusi Debian dan turunannya.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># apt install clang</span>
 </code></pre></div></div>
-<h2 id="mengaktifkan-lto-pada-kernel-linux">Mengaktifkan LTO pada Kernel Linux</h2>
+
+<h3 id="mengaktifkan-lto-pada-kernel-linux">Mengaktifkan LTO pada Kernel Linux</h3>
 <p>Menggunakan <em>Link Time Optimization</em> sewaktu membangun kernel Linux sangatlah mudah. Nyalakan skrip LTO dengan perintah di bawah.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /usr/src/linux</span>
 root /usr/src/linux <span class="c"># scripts/config -e LTO_CLANG</span>

@@ -8,12 +8,17 @@ image: '/media/clang/clang.jpg'
 Clang adalah program _compiler_ bahasa C yang mengutamakan kecepatan penyusunan dan penggunaan memori yang rendah. LLVM Developer Group adalah developer di balik program ini.
 
 LTO atau _Link Time Optimization_ adalah cara untuk mengoptimasi suatu program. Lebih lanjut bisa dibaca di artikel [LLVM Link Time Optimization: Design and Implementation](https://llvm.org/docs/LinkTimeOptimization.html).
-## Memasang Clang
+
+## Membangun Linux Dengan Clang
+Sebelum itu pastikan anda sudah mengatur konfigurasi kernel dengan benar. Disini saya tidak mengajarkan anda secara lengkap cara mengatur konfigurasi (.config file).
+
+### Memasang Clang
 Pastikan program Clang telah terinstall. Jika belum, unduhlah terlebih dahulu. Cara di bawah bisa anda lakukan jika berada di distribusi Debian dan turunannya.
 ```bash
 root # apt install clang
 ```
-## Mengaktifkan LTO pada Kernel Linux
+
+### Mengaktifkan LTO pada Kernel Linux
 Menggunakan _Link Time Optimization_ sewaktu membangun kernel Linux sangatlah mudah. Nyalakan skrip LTO dengan perintah di bawah.
 ```bash
 root # cd /usr/src/linux
