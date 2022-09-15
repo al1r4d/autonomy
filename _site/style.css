@@ -412,7 +412,7 @@ article hr {
 /* Footer
 /*------------------------------*/
 footer {
-  border-top: 1px solid #333;
+  border-top: 0px solid #333;
   background: #222;
   padding: 1em 0 1em 0;
   margin-top: 2em;
