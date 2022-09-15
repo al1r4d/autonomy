@@ -1,4 +1,0 @@
-I"ô<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /usr/src/linux</span>
-root /usr/src/linux <span class="c"># scripts/config -e LTO_CLANG</span>
-</code></pre></div></div>
-:ET
