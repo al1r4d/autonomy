@@ -1,0 +1,37 @@
+I"K<h3 id="format-drive">Format Drive</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cfdisk /dev/sda</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># mkfs.ext4 /dev/sda1</span>
+</code></pre></div></div>
+
+<h3 id="mount-partition">Mount Partition</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># mkdir -p /mnt/gentoo</span>
+root <span class="c"># mount /dev/sda1 /mnt/gentoo</span>
+</code></pre></div></div>
+
+<h3 id="stage-3">Stage 3</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /mnt/gentoo</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># wget https://bouncer.gentoo.org/fetch/root/all/releases/amd64/autobuilds/20220924T034745Z/stage3-amd64-desktop-openrc-20220924T034745Z.tar.xz</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># tar -xf stage3*</span>
+</code></pre></div></div>
+
+<h3 id="chroot">Chroot</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /mnt/gentoo</span>
+root <span class="c"># mount --types proc /proc /mnt/gentoo/proc</span>
+root <span class="c"># mount --rbind /sys /mnt/gentoo/sys</span>
+root <span class="c"># mount --make-rslave /mnt/gentoo/sys</span>
+root <span class="c"># mount --rbind /dev /mnt/gentoo/dev</span>
+root <span class="c"># mount --make-rslave /mnt/gentoo/dev</span>
+root <span class="c"># mount --bind /run /mnt/gentoo/run</span>
+root <span class="c"># mount --make-slave /mnt/gentoo/run</span>
+root <span class="c"># cp /etc/resolv.conf etc &amp;&amp; chroot . /bin/bash</span>
+root <span class="c"># source /etc/profile</span>
+</code></pre></div></div>
+:ET

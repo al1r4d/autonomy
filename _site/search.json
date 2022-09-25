@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Cara Cepat Install Gentoo Linux",
+      "category" : "",
+      "tags"     : "teknologi",
+	"url"      : "/rangkuman-instalasi-gentoo-linux",
+	"date"     : "2022-09-25 00:00:00 +0700"
+	
+    } ,
+  
+    {
       "title"    : "Menyusun Kernel Linux Dengan Clang LTO",
       "category" : "",
       "tags"     : "teknologi",

@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-25T17:22:04+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">autonomy</title><subtitle>untuk semua</subtitle><entry><title type="html">Menyusun Kernel Linux Dengan Clang LTO</title><link href="http://localhost:4000/membangun-kernel-linux-dengan-clang-lto" rel="alternate" type="text/html" title="Menyusun Kernel Linux Dengan Clang LTO" /><published>2022-09-15T00:00:00+07:00</published><updated>2022-09-15T00:00:00+07:00</updated><id>http://localhost:4000/membangun-kernel-linux-dengan-clang-lto</id><content type="html" xml:base="http://localhost:4000/membangun-kernel-linux-dengan-clang-lto"><![CDATA[<h2 id="apa-itu-clang-dan-lto">Apa Itu Clang dan LTO?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-25T17:41:29+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">autonomy</title><subtitle>untuk semua</subtitle><entry><title type="html">Cara Cepat Install Gentoo Linux</title><link href="http://localhost:4000/rangkuman-instalasi-gentoo-linux" rel="alternate" type="text/html" title="Cara Cepat Install Gentoo Linux" /><published>2022-09-25T00:00:00+07:00</published><updated>2022-09-25T00:00:00+07:00</updated><id>http://localhost:4000/rangkuman-instalasi-gentoo-linux</id><content type="html" xml:base="http://localhost:4000/rangkuman-instalasi-gentoo-linux"><![CDATA[<h3 id="format-drive">Format Drive</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cfdisk /dev/sda</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># mkfs.ext4 /dev/sda1</span>
+</code></pre></div></div>
+
+<h3 id="mount-partition">Mount Partition</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># mkdir -p /mnt/gentoo</span>
+root <span class="c"># mount /dev/sda1 /mnt/gentoo</span>
+</code></pre></div></div>
+
+<h3 id="stage-3">Stage 3</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /mnt/gentoo</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># wget https://bouncer.gentoo.org/fetch/root/all/releases/amd64/autobuilds/20220924T034745Z/stage3-amd64-desktop-openrc-20220924T034745Z.tar.xz</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># tar -xf stage3*</span>
+</code></pre></div></div>
+
+<h3 id="chroot">Chroot</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /mnt/gentoo</span>
+root <span class="c"># mount --types proc /proc /mnt/gentoo/proc</span>
+root <span class="c"># mount --rbind /sys /mnt/gentoo/sys</span>
+root <span class="c"># mount --make-rslave /mnt/gentoo/sys</span>
+root <span class="c"># mount --rbind /dev /mnt/gentoo/dev</span>
+root <span class="c"># mount --make-rslave /mnt/gentoo/dev</span>
+root <span class="c"># mount --bind /run /mnt/gentoo/run</span>
+root <span class="c"># mount --make-slave /mnt/gentoo/run</span>
+root <span class="c"># cp /etc/resolv.conf etc &amp;&amp; chroot . /bin/bash</span>
+root <span class="c"># source /etc/profile</span>
+</code></pre></div></div>
+
+<h3 id="update-repo-portage">Update Repo Portage</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># emerge-webrsync</span>
+</code></pre></div></div>
+
+<h3 id="user-accounts">User Accounts</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># passwd</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># useradd -g users -G wheel,portage,audio,video,usb,cdrom -m username</span>
+root <span class="c"># passwd username</span>
+</code></pre></div></div>
+
+<h3 id="system">System</h3>
+<h4 id="etcfstab">/etc/fstab</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/sda3		/		ext4		noatime		0 1
+</code></pre></div></div>
+<h4 id="hostname">Hostname</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">dns_domain_lo</span><span class="o">=</span><span class="s2">"mynetwork.net"</span>
+</code></pre></div></div>
+<h4 id="timezone">Timezone</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># ln -sf /usr/share/zoneinfo/Europe/Helsinki /etc/localtime</span>
+</code></pre></div></div>]]></content><author><name></name></author><category term="teknologi" /><summary type="html"><![CDATA[Format Drive]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/media/gentoo/gentoo.jpg" /><media:content medium="image" url="http://localhost:4000/media/gentoo/gentoo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Menyusun Kernel Linux Dengan Clang LTO</title><link href="http://localhost:4000/membangun-kernel-linux-dengan-clang-lto" rel="alternate" type="text/html" title="Menyusun Kernel Linux Dengan Clang LTO" /><published>2022-09-15T00:00:00+07:00</published><updated>2022-09-15T00:00:00+07:00</updated><id>http://localhost:4000/membangun-kernel-linux-dengan-clang-lto</id><content type="html" xml:base="http://localhost:4000/membangun-kernel-linux-dengan-clang-lto"><![CDATA[<h2 id="apa-itu-clang-dan-lto">Apa Itu Clang dan LTO?</h2>
 <p>Clang adalah program <em>compiler</em> bahasa C yang mengutamakan kecepatan penyusunan dan penggunaan memori yang rendah. LLVM Developer Group adalah developer di balik program ini.</p>
 
 <p>LTO atau <em>Link Time Optimization</em> adalah cara untuk mengoptimasi suatu program. Lebih lanjut bisa dibaca di artikel <a href="https://llvm.org/docs/LinkTimeOptimization.html">LLVM Link Time Optimization: Design and Implementation</a>.</p>
