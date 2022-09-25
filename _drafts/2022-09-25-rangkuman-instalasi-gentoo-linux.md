@@ -4,7 +4,7 @@ layout: post
 tag: teknologi
 image: '/media/gentoo/gentoo.jpg'
 ---
-
+Gentoo Linux adalah distribusi yang memungkinkan anda membangun semua program dari kode sumber saat pemasangan. Tentu berbeda dari umumnya yang serba *binary*. Selain itu, pemasangan yang dianggap susah membuat orang jarang menggunakan distro ini.
 ### Format Drive
 
 ```bash
@@ -76,4 +76,36 @@ dns_domain_lo="mynetwork.net"
 #### Timezone
 ```bash
 root # ln -sf /usr/share/zoneinfo/Europe/Helsinki /etc/localtime
+```
+
+#### Kernel
+```bash
+root # emerge gentoo-kernel-bin
+```
+
+#### Firmware
+```bash
+root # emerge linux-firmware
+```
+
+#### GRUB
+```bash
+root # emerge --ask sys-boot/grub
+```
+```bash
+root # grub-install /dev/sda
+root # grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+### Network Tools
+```bash
+root # emerge net-misc/dhcpcd networkmanager
+```
+
+### Keluar
+```bash
+root # exit
+root # cd /mnt
+root # umount -R gentoo
+root # reboot 
 ```
