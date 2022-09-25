@@ -12,7 +12,7 @@ layout: default
 
 <article class="post">
     <h2> {{ page.title }} </h2>
-    <div class="date">{{ page.date | date: "%-d %-B %-Y" }} </div>
+	<div class="date">{{ page.date | date: "%-d %-B %-Y" }} </div>
 <div>
   <div>
     <span><svg class="article-tag-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -27,14 +27,11 @@ layout: default
 
 
     </div>
-	{% include toc.html html=content %} 
-
-	  {% if page.image %}
-
-             
+{% if page.image %}             
             <img class="featured-image img-fluid" src="{% if page.image contains "" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
             {% endif %}
 
+	{% include toc.html html=content %} 
 <p>{{ content}}</p>
 </article>
 <hr>
