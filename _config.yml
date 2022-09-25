@@ -20,10 +20,10 @@ sass:
   style: :expanded
 
 # Newsline True/False
-newsline: true
+newsline: false
 
 plugins:
-  - jekyll-sitemap
+#  - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
