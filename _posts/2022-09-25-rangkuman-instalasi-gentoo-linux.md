@@ -78,7 +78,7 @@ root # passwd username
 #### Fstab
 Atur file `/etc/fstab` fstab sesuai partisi.
 ```
-/dev/sda3		/		ext4		noatime		0 1
+/dev/sda1		/		ext4		noatime		0 1
 ```
 #### Hostname
 Atur hostname di file `/etc/conf.d/hostname`.
