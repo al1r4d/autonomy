@@ -1,7 +1,7 @@
 ---
 title: Menyusun Kernel Linux Dengan Clang LTO
 layout: post
-tag: teknologi
+tag: linux
 image: '/media/clang/clang.jpg'
 ---
 ## Apa Itu Clang dan LTO?

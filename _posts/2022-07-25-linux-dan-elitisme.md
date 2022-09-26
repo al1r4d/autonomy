@@ -1,7 +1,7 @@
 ---
 title : Linux dan Elitisme
 tag :
-- teknologi
+- linux
 - salinan
 layout : post
 ---

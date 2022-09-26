@@ -1,7 +1,7 @@
 ---
 title: Cara Cepat Install Gentoo Linux
 layout: post
-tag: teknologi
+tag: linux
 image: '/media/gentoo/gentoo.jpg'
 ---
 Gentoo Linux adalah distribusi yang memungkinkan anda membangun semua program dari kode sumber saat pemasangan. Tentu berbeda dari umumnya yang serba *binary*. Selain itu, pemasangan yang dianggap susah membuat orang jarang menggunakan distro ini.

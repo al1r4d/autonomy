@@ -3,7 +3,7 @@
     {
       "title"    : "Cara Cepat Install Gentoo Linux",
       "category" : "",
-      "tags"     : "teknologi",
+      "tags"     : "linux",
 	"url"      : "/rangkuman-instalasi-gentoo-linux",
 	"date"     : "2022-09-25 00:00:00 +0700"
 	
@@ -12,7 +12,7 @@
     {
       "title"    : "Menyusun Kernel Linux Dengan Clang LTO",
       "category" : "",
-      "tags"     : "teknologi",
+      "tags"     : "linux",
 	"url"      : "/membangun-kernel-linux-dengan-clang-lto",
 	"date"     : "2022-09-15 00:00:00 +0700"
 	
@@ -21,7 +21,7 @@
     {
       "title"    : "Linux dan Elitisme",
       "category" : "",
-      "tags"     : "teknologi, salinan",
+      "tags"     : "linux, salinan",
 	"url"      : "/linux-dan-elitisme",
 	"date"     : "2022-07-25 00:00:00 +0700"
 	
