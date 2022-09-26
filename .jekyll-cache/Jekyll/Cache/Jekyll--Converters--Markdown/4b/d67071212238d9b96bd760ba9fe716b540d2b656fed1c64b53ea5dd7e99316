@@ -1,0 +1,99 @@
+I"Ñ<p>Gentoo Linux adalah distribusi yang memungkinkan anda membangun semua program dari kode sumber saat pemasangan. Tentu berbeda dari umumnya yang serba <em>binary</em>. Selain itu, pemasangan yang dianggap susah membuat orang jarang menggunakan distro ini.</p>
+
+<p>Saya akan menulis rangkuman instalasi Gentoo Linux metode MBR. Jika anda GPT/UEFI, maka bagian partisi dan grub harus diubah.</p>
+
+<h3 id="download-iso-gentoo">Download ISO Gentoo</h3>
+<p>Download <a href="https://www.gentoo.org/downloads/">ISO Gentoo Live</a> dahulu.</p>
+
+<h3 id="format-drive">Format Drive</h3>
+<p>Kita akan format dan mengatur partisi <code class="language-plaintext highlighter-rouge">/dev/sdX</code>, misalnya <code class="language-plaintext highlighter-rouge">/dev/sda</code>. Silahkan atur partisi sesuai keinginan. Disini saya hanya membuat satu partisi, yaitu root (/).</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cfdisk /dev/sda</span>
+</code></pre></div></div>
+<p>Atur filesystem yang digunakan, misalnya <code class="language-plaintext highlighter-rouge">ext4</code>. Saya sarankan <code class="language-plaintext highlighter-rouge">btrfs</code> saja.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># mkfs.ext4 /dev/sda1</span>
+</code></pre></div></div>
+
+<h3 id="mount-partition">Mount Partition</h3>
+<p>Kita <em>mount</em> partisi yang sudah dibuat.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># mkdir -p /mnt/gentoo</span>
+root <span class="c"># mount /dev/sda1 /mnt/gentoo</span>
+</code></pre></div></div>
+
+<h3 id="stage-3">Stage 3</h3>
+<p>Ganti direktori ke folder <em>mount</em>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /mnt/gentoo</span>
+</code></pre></div></div>
+<p>Unduh berkas stage3 di <a href="https://bouncer.gentoo.org/fetch/root/all/releases/amd64/autobuilds/20220924T034745Z/stage3-amd64-desktop-openrc-20220924T034745Z.tar.xz">Gentoo Downloads</a></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># wget https://bouncer.gentoo.org/fetch/root/all/releases/amd64/autobuilds/20220924T034745Z/stage3-amd64-desktop-openrc-20220924T034745Z.tar.xz</span>
+</code></pre></div></div>
+<p>Ekstrak file stage3.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># tar -xf stage3*</span>
+</code></pre></div></div>
+
+<h3 id="chroot">Chroot</h3>
+<p>Disini kita akan <em>chroot</em>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># cd /mnt/gentoo</span>
+root <span class="c"># mount --types proc /proc /mnt/gentoo/proc</span>
+root <span class="c"># mount --rbind /sys /mnt/gentoo/sys</span>
+root <span class="c"># mount --make-rslave /mnt/gentoo/sys</span>
+root <span class="c"># mount --rbind /dev /mnt/gentoo/dev</span>
+root <span class="c"># mount --make-rslave /mnt/gentoo/dev</span>
+root <span class="c"># mount --bind /run /mnt/gentoo/run</span>
+root <span class="c"># mount --make-slave /mnt/gentoo/run</span>
+root <span class="c"># cp /etc/resolv.conf etc &amp;&amp; chroot . /bin/bash</span>
+root <span class="c"># source /etc/profile</span>
+</code></pre></div></div>
+
+<h3 id="update-repo-portage">Update Repo Portage</h3>
+<p>Perbarui berkas - berkas dari repositori.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># emerge-webrsync</span>
+</code></pre></div></div>
+
+<h3 id="user-accounts">User Accounts</h3>
+<p>Ubah kata sandi akun <em>root</em>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># passwd</span>
+</code></pre></div></div>
+<p>Kita akan membuat akun baru.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># useradd -g users -G wheel,portage,audio,video,usb,cdrom -m username</span>
+root <span class="c"># passwd username</span>
+</code></pre></div></div>
+
+<h3 id="system">System</h3>
+<h4 id="etcfstab">/etc/fstab</h4>
+<p>Atur file fstab sesuai partisi.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/sda3		/		ext4		noatime		0 1
+</code></pre></div></div>
+<h4 id="hostname">Hostname</h4>
+<p>Atur hostname di file <code class="language-plaintext highlighter-rouge">/etc/conf.d/hostname</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">dns_domain_lo</span><span class="o">=</span><span class="s2">"mynetwork.net"</span>
+</code></pre></div></div>
+<h4 id="timezone">Timezone</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># ln -sf /usr/share/zoneinfo/Europe/Helsinki /etc/localtime</span>
+</code></pre></div></div>
+
+<h4 id="kernel">Kernel</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># emerge gentoo-kernel-bin</span>
+</code></pre></div></div>
+
+<h4 id="firmware">Firmware</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># emerge linux-firmware</span>
+</code></pre></div></div>
+
+<h4 id="grub">GRUB</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># emerge --ask sys-boot/grub</span>
+</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># grub-install /dev/sda</span>
+root <span class="c"># grub-mkconfig -o /boot/grub/grub.cfg</span>
+</code></pre></div></div>
+
+<h3 id="network-tools">Network Tools</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># emerge net-misc/dhcpcd networkmanager</span>
+</code></pre></div></div>
+
+<h3 id="keluar">Keluar</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root <span class="c"># exit</span>
+root <span class="c"># cd /mnt</span>
+root <span class="c"># umount -R gentoo</span>
+root <span class="c"># reboot </span>
+</code></pre></div></div>
+:ET
