@@ -3,12 +3,7 @@ title: Tentang
 layout: page
 permalink: /tentang
 ---
-## Tentang
-Adalah sebuah wadah untuk membagikan ide seputar teknologi, terutama Linux. Dikemas secara sederhana dan menarik.
+## Perihal Blog
+**Autono.my.id** adalah situs catatan dari seorang penjelajah internet yang berfokus pada teknologi, terutama program sumber terbuka. 
 
-## Berlangganan
-[/feed.xml](/feed.xml)
-
-## Kontak
-- Email : al1r4d at riseup dot net
-- Mastodon : Saya aktif di [Mastodon](https://mstdn.io/@al1r4d)
+Seluruh konten tersedia gratis dan bebas untuk dibaca, disalin, serta disebarluaskan, hingga dapat dikembangkan pada media lain. Pastikan anda tidak lupa menaruh sumbernya.
