@@ -1,0 +1,8 @@
+I"E<p>Tanggal 2 Oktober 2022 Kernel Linux 6.0 telah dirilis. Kernel ini membawa perbaikan untuk <em>Retbleed vulnerability</em>, peningkatan kerja virtualisasi, dukungan terbaru untuk GPU, dan lain - lain.</p>
+<h2 id="motivasi">Motivasi</h2>
+<p>Setiap kernel baru muncul, saya akan memasangnya dan <em>tweaking</em> agar menghasilkan performa yang terbaik. Saya suka dengan oprek - oprek dan meningkatkan kinerja.</p>
+<h2 id="yang-saya-lakukan">Yang Saya Lakukan</h2>
+<p>Saya melakukan penambalan Kernel Linux.</p>
+<h3 id="scheduler-linux">Scheduler Linux</h3>
+<p>Kali ini saya berpindah ke <a href="https://github.com/hamadmarri/TT-CPU-Scheduler">TT CPU Scheduler</a> setelah sebelumnya menggunakan <a href="https://www.phoronix.com/news/Linux-BitMap-Queue-BMQ">BMQ CPU Scheduler</a>. Mengapa pindah? Saya tertarik mencoba setelah diberitahu kalau TT bagus untuk <em>Latency</em> dan tetap responsif ketika <em>workload</em> berat. Setelah saya memasang TT dan melakukan kompilasi kernel, saya merasa temperatur lebih dingin daripada BMQ. Waktu kompilasi pun beda 1 - 5 menit dibanding BMQ.</p>
+:ET

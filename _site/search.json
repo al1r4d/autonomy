@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Catatan Kernel Linux 6.0",
+      "category" : "",
+      "tags"     : "linux",
+	"url"      : "/catatan-kernel-6",
+	"date"     : "2022-10-07 00:00:00 +0700"
+	
+    } ,
+  
+    {
       "title"    : "Cara Cepat Install Gentoo Linux",
       "category" : "",
       "tags"     : "linux",

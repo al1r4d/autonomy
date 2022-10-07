@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-28T18:24:30+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">autonomy</title><subtitle>untuk semua</subtitle><entry><title type="html">Cara Cepat Install Gentoo Linux</title><link href="http://localhost:4000/rangkuman-instalasi-gentoo-linux" rel="alternate" type="text/html" title="Cara Cepat Install Gentoo Linux" /><published>2022-09-25T00:00:00+07:00</published><updated>2022-09-25T00:00:00+07:00</updated><id>http://localhost:4000/rangkuman-instalasi-gentoo-linux</id><content type="html" xml:base="http://localhost:4000/rangkuman-instalasi-gentoo-linux"><![CDATA[<p>Gentoo Linux adalah distribusi yang memungkinkan anda membangun semua program dari kode sumber saat pemasangan. Tentu berbeda dari umumnya yang serba <em>binary</em>. Selain itu, pemasangan yang dianggap susah membuat orang jarang menggunakan distro ini.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-07T22:21:57+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">autonomy</title><subtitle>untuk semua</subtitle><entry><title type="html">Catatan Kernel Linux 6.0</title><link href="http://localhost:4000/catatan-kernel-6" rel="alternate" type="text/html" title="Catatan Kernel Linux 6.0" /><published>2022-10-07T00:00:00+07:00</published><updated>2022-10-07T00:00:00+07:00</updated><id>http://localhost:4000/catatan-kernel-6</id><content type="html" xml:base="http://localhost:4000/catatan-kernel-6"><![CDATA[<p>Tanggal 2 Oktober 2022 Kernel Linux 6.0 telah dirilis. Kernel ini membawa perbaikan untuk <em>Retbleed vulnerability</em>, peningkatan kerja virtualisasi, dukungan terbaru untuk GPU, dan lain - lain.</p>
+<h2 id="motivasi">Motivasi</h2>
+<p>Setiap kernel baru muncul, saya akan memasangnya dan <em>tweaking</em> agar menghasilkan performa yang terbaik. Saya suka dengan oprek - oprek dan meningkatkan kinerja.</p>
+<h2 id="yang-saya-lakukan">Yang Saya Lakukan</h2>
+<p>Saya melakukan penambalan Kernel Linux.</p>
+<h3 id="scheduler-linux">Scheduler Linux</h3>
+<p>Kali ini saya berpindah ke <a href="https://github.com/hamadmarri/TT-CPU-Scheduler">TT CPU Scheduler</a> setelah sebelumnya menggunakan <a href="https://www.phoronix.com/news/Linux-BitMap-Queue-BMQ">BMQ CPU Scheduler</a>. Mengapa pindah? Saya tertarik mencoba setelah diberitahu kalau TT bagus untuk <em>Latency</em> dan tetap responsif ketika <em>workload</em> berat. Setelah saya memasang TT dan melakukan kompilasi kernel, saya merasa temperatur lebih dingin daripada BMQ. Waktu kompilasi pun beda 1 - 5 menit dibanding BMQ.</p>
+
+<p>Jika anda pengguna Real-time kernel, TT bisa digunakan secara bersamaan. Tertarik mencoba?</p>
+<h3 id="clear-linux">Clear Linux</h3>
+<p>Clear Linux adalah distro buatan Intel yang berfokus pada optimisasi bagi pengguna CPU Intel. Saya menggunakan patch <strong>Clear Linux</strong> karena terdorong kelebihannya.</p>
+<h3 id="google-mg-lru">Google MG LRU</h3>
+<p>Multi-Gen LRU atau MGLRU membantu dan menambah performa jika anda memiliki RAM rendah.</p>
+<h3 id="lrng">LRNG</h3>
+<p>LRNG adalah <em>fast random generator</em> jika dibandingkan <em>upstream</em>.</p>
+<h3 id="clang-full-lto">Clang Full LTO</h3>
+<p>Saya membaca artikel Phoronix dan tertulis bahwa perfoma kernel yang dibangun menggunakan Clang Full LTO lebih baik daripada GCC.</p>
+<h3 id="maple-tree">Maple Tree</h3>
+<p>Untuk efisiensi penggunaan <em>processor cache</em>.</p>
+<h3 id="-ck-patchset">-CK Patchset</h3>
+<p>Agar latency tidak tinggi.</p>
+<h3 id="high-hz">High HZ</h3>
+<p>Entah mengapa semakin tinggi HZ, maka makin responsif desktop saya. Maka dari itu saya memilih 1666 HZ.</p>
+<h3 id="-o3">-O3</h3>
+<p>-O3 adalah level optimasi tertinggi, tetapi harus diwaspadai karena beberapa orang tidak menyarankan ini. Alasannya karena takut aplikasinya tidak berjalan.</p>
+<h3 id="-marchcpukamu">-march=”cpukamu”</h3>
+<p>Saya menggunakan Intel seri Haswell. Jadi saya menetapkan <code class="language-plaintext highlighter-rouge">-march=haswell</code>.</p>
+<h3 id="bbr-v2">BBR v2</h3>
+<p>Untuk ningkatin kecepatan jaringan di Linux.</p>]]></content><author><name></name></author><category term="linux" /><summary type="html"><![CDATA[Tanggal 2 Oktober 2022 Kernel Linux 6.0 telah dirilis. Kernel ini membawa perbaikan untuk Retbleed vulnerability, peningkatan kerja virtualisasi, dukungan terbaru untuk GPU, dan lain - lain. Motivasi Setiap kernel baru muncul, saya akan memasangnya dan tweaking agar menghasilkan performa yang terbaik. Saya suka dengan oprek - oprek dan meningkatkan kinerja. Yang Saya Lakukan Saya melakukan penambalan Kernel Linux. Scheduler Linux Kali ini saya berpindah ke TT CPU Scheduler setelah sebelumnya menggunakan BMQ CPU Scheduler. Mengapa pindah? Saya tertarik mencoba setelah diberitahu kalau TT bagus untuk Latency dan tetap responsif ketika workload berat. Setelah saya memasang TT dan melakukan kompilasi kernel, saya merasa temperatur lebih dingin daripada BMQ. Waktu kompilasi pun beda 1 - 5 menit dibanding BMQ.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/media/linux/kernel.png" /><media:content medium="image" url="http://localhost:4000/media/linux/kernel.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Cara Cepat Install Gentoo Linux</title><link href="http://localhost:4000/rangkuman-instalasi-gentoo-linux" rel="alternate" type="text/html" title="Cara Cepat Install Gentoo Linux" /><published>2022-09-25T00:00:00+07:00</published><updated>2022-09-25T00:00:00+07:00</updated><id>http://localhost:4000/rangkuman-instalasi-gentoo-linux</id><content type="html" xml:base="http://localhost:4000/rangkuman-instalasi-gentoo-linux"><![CDATA[<p>Gentoo Linux adalah distribusi yang memungkinkan anda membangun semua program dari kode sumber saat pemasangan. Tentu berbeda dari umumnya yang serba <em>binary</em>. Selain itu, pemasangan yang dianggap susah membuat orang jarang menggunakan distro ini.</p>
 
 <p>Saya akan menulis rangkuman instalasi Gentoo Linux metode MBR. Jika anda GPT/UEFI, maka bagian partisi dan grub harus diubah.</p>
 

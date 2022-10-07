@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="Autonomy">
+    <meta name="author" content="autonomy" />
+
+   <link rel="stylesheet" type="text/css" href="/style.css" />
+
+   	
+   
+
+
+
+
+
+
+
+   
+
+    
+    <title>Catatan Kernel Linux 6.0 - autonomy</title>
+    
+    
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="autonomy" />
+
+    
+    
+	  </head>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Catatan Kernel Linux 6.0 | autonomy</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Catatan Kernel Linux 6.0" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tanggal 2 Oktober 2022 Kernel Linux 6.0 telah dirilis. Kernel ini membawa perbaikan untuk Retbleed vulnerability, peningkatan kerja virtualisasi, dukungan terbaru untuk GPU, dan lain - lain. Motivasi Setiap kernel baru muncul, saya akan memasangnya dan tweaking agar menghasilkan performa yang terbaik. Saya suka dengan oprek - oprek dan meningkatkan kinerja. Yang Saya Lakukan Saya melakukan penambalan Kernel Linux. Scheduler Linux Kali ini saya berpindah ke TT CPU Scheduler setelah sebelumnya menggunakan BMQ CPU Scheduler. Mengapa pindah? Saya tertarik mencoba setelah diberitahu kalau TT bagus untuk Latency dan tetap responsif ketika workload berat. Setelah saya memasang TT dan melakukan kompilasi kernel, saya merasa temperatur lebih dingin daripada BMQ. Waktu kompilasi pun beda 1 - 5 menit dibanding BMQ." />
+<meta property="og:description" content="Tanggal 2 Oktober 2022 Kernel Linux 6.0 telah dirilis. Kernel ini membawa perbaikan untuk Retbleed vulnerability, peningkatan kerja virtualisasi, dukungan terbaru untuk GPU, dan lain - lain. Motivasi Setiap kernel baru muncul, saya akan memasangnya dan tweaking agar menghasilkan performa yang terbaik. Saya suka dengan oprek - oprek dan meningkatkan kinerja. Yang Saya Lakukan Saya melakukan penambalan Kernel Linux. Scheduler Linux Kali ini saya berpindah ke TT CPU Scheduler setelah sebelumnya menggunakan BMQ CPU Scheduler. Mengapa pindah? Saya tertarik mencoba setelah diberitahu kalau TT bagus untuk Latency dan tetap responsif ketika workload berat. Setelah saya memasang TT dan melakukan kompilasi kernel, saya merasa temperatur lebih dingin daripada BMQ. Waktu kompilasi pun beda 1 - 5 menit dibanding BMQ." />
+<link rel="canonical" href="http://localhost:4000/catatan-kernel-6" />
+<meta property="og:url" content="http://localhost:4000/catatan-kernel-6" />
+<meta property="og:site_name" content="autonomy" />
+<meta property="og:image" content="http://localhost:4000/media/linux/kernel.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-07T00:00:00+07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/linux/kernel.png" />
+<meta property="twitter:title" content="Catatan Kernel Linux 6.0" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-07T00:00:00+07:00","datePublished":"2022-10-07T00:00:00+07:00","description":"Tanggal 2 Oktober 2022 Kernel Linux 6.0 telah dirilis. Kernel ini membawa perbaikan untuk Retbleed vulnerability, peningkatan kerja virtualisasi, dukungan terbaru untuk GPU, dan lain - lain. Motivasi Setiap kernel baru muncul, saya akan memasangnya dan tweaking agar menghasilkan performa yang terbaik. Saya suka dengan oprek - oprek dan meningkatkan kinerja. Yang Saya Lakukan Saya melakukan penambalan Kernel Linux. Scheduler Linux Kali ini saya berpindah ke TT CPU Scheduler setelah sebelumnya menggunakan BMQ CPU Scheduler. Mengapa pindah? Saya tertarik mencoba setelah diberitahu kalau TT bagus untuk Latency dan tetap responsif ketika workload berat. Setelah saya memasang TT dan melakukan kompilasi kernel, saya merasa temperatur lebih dingin daripada BMQ. Waktu kompilasi pun beda 1 - 5 menit dibanding BMQ.","headline":"Catatan Kernel Linux 6.0","image":"http://localhost:4000/media/linux/kernel.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/catatan-kernel-6"},"url":"http://localhost:4000/catatan-kernel-6"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- Needed for the "current" class -->
+
+
+<header>
+     
+
+<div class="wrapper">
+	
+	<h1 class="left"><a href="/">Autonomy</a></h1>
+
+		<nav class="right">
+		
+	<ul>
+		
+		<!-- <li><a href="https://mstdn.io/@al1r4d">Mastodon</a></li>
+			<li><a href="mailto:al1r4d@riseup.net">Mail</a></li> --!>
+			<li><p><a href="/tentang">Tentang</a></p></li>
+
+	
+	</ul>
+        
+		</nav> 
+
+
+        <div style="clear:both;"></div>
+
+    </div>
+
+</header>
+
+<main class="page-content">
+            <div class="container">
+    <div class="container-edge-border">
+      </div>
+<!-- Script pointing to search-script.js -->
+<script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt MIT
+// @license-end
+</script>
+
+<article class="post">
+    <h2> Catatan Kernel Linux 6.0 </h2>
+	<div class="date">7 October 2022 </div>
+<div>
+  <div>
+    <span><svg class="article-tag-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+        <line x1="7" y1="7" x2="7" y2="7"></line>
+      </svg> 
+  
+    
+ <a href="/tag/linux">#linux</a>
+  
+</span>
+
+
+    </div>
+             
+            <img class="featured-image img-fluid" src="/media/linux/kernel.png" alt="Catatan Kernel Linux 6.0">
+            
+	    <br>
+	    <details>
+		    <summary>Daftar Isi</summary>
+	<ul><li><a href="#motivasi">Motivasi</a></li><li><a href="#yang-saya-lakukan">Yang Saya Lakukan</a><ul><li><a href="#scheduler-linux">Scheduler Linux</a></li><li><a href="#clear-linux">Clear Linux</a></li><li><a href="#google-mg-lru">Google MG LRU</a></li><li><a href="#lrng">LRNG</a></li><li><a href="#clang-full-lto">Clang Full LTO</a></li><li><a href="#maple-tree">Maple Tree</a></li><li><a href="#-ck-patchset">-CK Patchset</a></li><li><a href="#high-hz">High HZ</a></li><li><a href="#-o3">-O3</a></li><li><a href="#-marchcpukamu">-march=”cpukamu”</a></li><li><a href="#bbr-v2">BBR v2</a></li></ul></li></ul> 
+	    </details>
+<p><p>Tanggal 2 Oktober 2022 Kernel Linux 6.0 telah dirilis. Kernel ini membawa perbaikan untuk <em>Retbleed vulnerability</em>, peningkatan kerja virtualisasi, dukungan terbaru untuk GPU, dan lain - lain.</p>
+<h2 id="motivasi">Motivasi</h2>
+<p>Setiap kernel baru muncul, saya akan memasangnya dan <em>tweaking</em> agar menghasilkan performa yang terbaik. Saya suka dengan oprek - oprek dan meningkatkan kinerja.</p>
+<h2 id="yang-saya-lakukan">Yang Saya Lakukan</h2>
+<p>Saya melakukan penambalan Kernel Linux.</p>
+<h3 id="scheduler-linux">Scheduler Linux</h3>
+<p>Kali ini saya berpindah ke <a href="https://github.com/hamadmarri/TT-CPU-Scheduler">TT CPU Scheduler</a> setelah sebelumnya menggunakan <a href="https://www.phoronix.com/news/Linux-BitMap-Queue-BMQ">BMQ CPU Scheduler</a>. Mengapa pindah? Saya tertarik mencoba setelah diberitahu kalau TT bagus untuk <em>Latency</em> dan tetap responsif ketika <em>workload</em> berat. Setelah saya memasang TT dan melakukan kompilasi kernel, saya merasa temperatur lebih dingin daripada BMQ. Waktu kompilasi pun beda 1 - 5 menit dibanding BMQ.</p>
+
+<p>Jika anda pengguna Real-time kernel, TT bisa digunakan secara bersamaan. Tertarik mencoba?</p>
+<h3 id="clear-linux">Clear Linux</h3>
+<p>Clear Linux adalah distro buatan Intel yang berfokus pada optimisasi bagi pengguna CPU Intel. Saya menggunakan patch <strong>Clear Linux</strong> karena terdorong kelebihannya.</p>
+<h3 id="google-mg-lru">Google MG LRU</h3>
+<p>Multi-Gen LRU atau MGLRU membantu dan menambah performa jika anda memiliki RAM rendah.</p>
+<h3 id="lrng">LRNG</h3>
+<p>LRNG adalah <em>fast random generator</em> jika dibandingkan <em>upstream</em>.</p>
+<h3 id="clang-full-lto">Clang Full LTO</h3>
+<p>Saya membaca artikel Phoronix dan tertulis bahwa perfoma kernel yang dibangun menggunakan Clang Full LTO lebih baik daripada GCC.</p>
+<h3 id="maple-tree">Maple Tree</h3>
+<p>Untuk efisiensi penggunaan <em>processor cache</em>.</p>
+<h3 id="-ck-patchset">-CK Patchset</h3>
+<p>Agar latency tidak tinggi.</p>
+<h3 id="high-hz">High HZ</h3>
+<p>Entah mengapa semakin tinggi HZ, maka makin responsif desktop saya. Maka dari itu saya memilih 1666 HZ.</p>
+<h3 id="-o3">-O3</h3>
+<p>-O3 adalah level optimasi tertinggi, tetapi harus diwaspadai karena beberapa orang tidak menyarankan ini. Alasannya karena takut aplikasinya tidak berjalan.</p>
+<h3 id="-marchcpukamu">-march=”cpukamu”</h3>
+<p>Saya menggunakan Intel seri Haswell. Jadi saya menetapkan <code class="language-plaintext highlighter-rouge">-march=haswell</code>.</p>
+<h3 id="bbr-v2">BBR v2</h3>
+<p>Untuk ningkatin kecepatan jaringan di Linux.</p>
+</p>
+</article>
+<hr>
+
+<h1 style="color:#7e9f5b">Komentar</h1>
+<p>Kirim komentar anda ke <a href="mailto:al1r4d@riseup.net">email</a> dengan subjek judul postingan ini.</p>
+
+
+    
+    
+        
+            
+                
+                <h1 style="color:#7e9f5b">Pos Berkaitan</h1>
+                <ul>
+                
+                <li class="relatedPost">
+                    <a href="/rangkuman-instalasi-gentoo-linux">Cara Cepat Install Gentoo Linux
+                    
+                    </a>
+                </li>
+                
+                
+            
+        
+    
+
+    
+    
+        
+            
+                
+                <li class="relatedPost">
+                    <a href="/membangun-kernel-linux-dengan-clang-lto">Menyusun Kernel Linux Dengan Clang LTO
+                    
+                    </a>
+                </li>
+                
+                
+            
+        
+    
+
+    
+    
+        
+            
+                
+                <li class="relatedPost">
+                    <a href="/linux-dan-elitisme">Linux dan Elitisme
+                    
+                    </a>
+                </li>
+                
+                
+            
+        
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+
+    </ul>
+
+
+<div class="perhatian">
+        <h1>📡 Berlangganan</h1>
+        <p>Biar tidak kelewatan postingan terbaru, berlangganan lewat <a href="/feed.xml">rss</a>.</p>
+	<p>Autonomy memilih RSS karena cepat, sederhana, dan mudah. Tidak seperti <i>email newsletter</i>.</p>
+</div>
+
+
+
+        </main><footer>
+  <center>
+    <div>
+      <marquee direction="right">
+      <a href="https://www.fsf.org/windows/"><img src="/media/propaganda/linux.gif"></img></a>
+      <a href="https://itsfoss.com/why-firefox/"><img src="/media/propaganda/firefox.gif"></img></a>
+      <a href="https://www.gnu.org/"><img src="/media/propaganda/gnu.png"></img></a>
+      <a href="https://www.vim.org/"><img src="/media/propaganda/vim.gif"></img></a>
+      <a href="https://www.eff.org/"><img src="/media/propaganda/getmozilla2.gif"></img></a>
+      <a href="https://joinmastodon.org"><img src="/media/propaganda/mastodon.gif"></img></a>
+      <a href="https://www.gnu.org/proprietary/malware-google.en.html"><img src="/media/propaganda/chrmevil.gif"></img></a>
+      <img src="/media/propaganda/internet-privacy.gif"></img>
+      <img src="/media/propaganda/repair.png"></img>
+      <a href="https://www.defectivebydesign.org/"><img src="/media/propaganda/drm.gif"></img></a>
+    </div>
+    </marquee>
+<p>Hak Cipta © 2022 <b>Autonomy</b>.</p>
+</footer>
+	
+</body>
+</html>
