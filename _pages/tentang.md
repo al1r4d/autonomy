@@ -3,7 +3,12 @@ title: Tentang
 layout: page
 permalink: /tentang
 ---
-## Perihal Blog
-**Autono.my.id** adalah situs catatan dari seorang penjelajah internet yang berfokus pada teknologi, terutama program sumber terbuka. 
+## Pemilik
+<img class="right avatar" src="/media/author.jpg">
+**Halo semua!**
 
-Seluruh konten tersedia gratis dan bebas untuk dibaca, disalin, serta disebarluaskan, hingga dapat dikembangkan pada media lain. Pastikan anda tidak lupa menaruh sumbernya.
+Nama saya Alif Radhitya, seorang pelajar sekaligus pengguna Gentoo Linux. Saya juga aktif di Kelompok Linux Arek Suroboyo. Perlu diingat saya bukan **progammer**, apalagi **hacker**.
+
+Blog ini adalah blog pribadi seputar teknologi, terutama Linux dan pengalaman saya menggunakan Linux.
+
+Saya terbuka soal masukan. Silahkan hubungi saya lewat email sesuai yang saya berikan.

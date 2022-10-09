@@ -3,9 +3,10 @@
     <body><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Hanya ${USER} berbagi pengalaman">
     <meta name="keywords" content="Autonomy">
     <meta name="author" content="autonomy" />
+	 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
 
    <link rel="stylesheet" type="text/css" href="/style.css" />
 
@@ -21,7 +22,7 @@
    
 
     
-    <title>Catatan Kernel Linux 6.0 - autonomy</title>
+    <title>Catatan Optimasi Kernel Linux 6.0 - autonomy</title>
     
     
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="autonomy" />
@@ -30,9 +31,9 @@
     
 	  </head>
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Catatan Kernel Linux 6.0 | autonomy</title>
+<title>Catatan Optimasi Kernel Linux 6.0 | autonomy</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Catatan Kernel Linux 6.0" />
+<meta property="og:title" content="Catatan Optimasi Kernel Linux 6.0" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Tanggal 2 Oktober 2022 Kernel Linux 6.0 telah dirilis. Kernel ini membawa perbaikan untuk Retbleed vulnerability, peningkatan kerja virtualisasi, dukungan terbaru untuk GPU, dan lain - lain. Motivasi Setiap kernel baru muncul, saya akan memasangnya dan tweaking agar menghasilkan performa yang terbaik. Saya suka dengan oprek - oprek dan meningkatkan kinerja. Yang Saya Lakukan Saya melakukan penambalan Kernel Linux. Scheduler Linux Kali ini saya berpindah ke TT CPU Scheduler setelah sebelumnya menggunakan BMQ CPU Scheduler. Mengapa pindah? Saya tertarik mencoba setelah diberitahu kalau TT bagus untuk Latency dan tetap responsif ketika workload berat. Setelah saya memasang TT dan melakukan kompilasi kernel, saya merasa temperatur lebih dingin daripada BMQ. Waktu kompilasi pun beda 1 - 5 menit dibanding BMQ." />
 <meta property="og:description" content="Tanggal 2 Oktober 2022 Kernel Linux 6.0 telah dirilis. Kernel ini membawa perbaikan untuk Retbleed vulnerability, peningkatan kerja virtualisasi, dukungan terbaru untuk GPU, dan lain - lain. Motivasi Setiap kernel baru muncul, saya akan memasangnya dan tweaking agar menghasilkan performa yang terbaik. Saya suka dengan oprek - oprek dan meningkatkan kinerja. Yang Saya Lakukan Saya melakukan penambalan Kernel Linux. Scheduler Linux Kali ini saya berpindah ke TT CPU Scheduler setelah sebelumnya menggunakan BMQ CPU Scheduler. Mengapa pindah? Saya tertarik mencoba setelah diberitahu kalau TT bagus untuk Latency dan tetap responsif ketika workload berat. Setelah saya memasang TT dan melakukan kompilasi kernel, saya merasa temperatur lebih dingin daripada BMQ. Waktu kompilasi pun beda 1 - 5 menit dibanding BMQ." />
@@ -44,9 +45,9 @@
 <meta property="article:published_time" content="2022-10-07T00:00:00+07:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/media/linux/kernel.png" />
-<meta property="twitter:title" content="Catatan Kernel Linux 6.0" />
+<meta property="twitter:title" content="Catatan Optimasi Kernel Linux 6.0" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-07T00:00:00+07:00","datePublished":"2022-10-07T00:00:00+07:00","description":"Tanggal 2 Oktober 2022 Kernel Linux 6.0 telah dirilis. Kernel ini membawa perbaikan untuk Retbleed vulnerability, peningkatan kerja virtualisasi, dukungan terbaru untuk GPU, dan lain - lain. Motivasi Setiap kernel baru muncul, saya akan memasangnya dan tweaking agar menghasilkan performa yang terbaik. Saya suka dengan oprek - oprek dan meningkatkan kinerja. Yang Saya Lakukan Saya melakukan penambalan Kernel Linux. Scheduler Linux Kali ini saya berpindah ke TT CPU Scheduler setelah sebelumnya menggunakan BMQ CPU Scheduler. Mengapa pindah? Saya tertarik mencoba setelah diberitahu kalau TT bagus untuk Latency dan tetap responsif ketika workload berat. Setelah saya memasang TT dan melakukan kompilasi kernel, saya merasa temperatur lebih dingin daripada BMQ. Waktu kompilasi pun beda 1 - 5 menit dibanding BMQ.","headline":"Catatan Kernel Linux 6.0","image":"http://localhost:4000/media/linux/kernel.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/catatan-kernel-6"},"url":"http://localhost:4000/catatan-kernel-6"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-07T00:00:00+07:00","datePublished":"2022-10-07T00:00:00+07:00","description":"Tanggal 2 Oktober 2022 Kernel Linux 6.0 telah dirilis. Kernel ini membawa perbaikan untuk Retbleed vulnerability, peningkatan kerja virtualisasi, dukungan terbaru untuk GPU, dan lain - lain. Motivasi Setiap kernel baru muncul, saya akan memasangnya dan tweaking agar menghasilkan performa yang terbaik. Saya suka dengan oprek - oprek dan meningkatkan kinerja. Yang Saya Lakukan Saya melakukan penambalan Kernel Linux. Scheduler Linux Kali ini saya berpindah ke TT CPU Scheduler setelah sebelumnya menggunakan BMQ CPU Scheduler. Mengapa pindah? Saya tertarik mencoba setelah diberitahu kalau TT bagus untuk Latency dan tetap responsif ketika workload berat. Setelah saya memasang TT dan melakukan kompilasi kernel, saya merasa temperatur lebih dingin daripada BMQ. Waktu kompilasi pun beda 1 - 5 menit dibanding BMQ.","headline":"Catatan Optimasi Kernel Linux 6.0","image":"http://localhost:4000/media/linux/kernel.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/catatan-kernel-6"},"url":"http://localhost:4000/catatan-kernel-6"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- Needed for the "current" class -->
 
@@ -89,7 +90,7 @@
 </script>
 
 <article class="post">
-    <h2> Catatan Kernel Linux 6.0 </h2>
+    <h2> Catatan Optimasi Kernel Linux 6.0 </h2>
 	<div class="date">7 October 2022 </div>
 <div>
   <div>
@@ -106,7 +107,7 @@
 
     </div>
              
-            <img class="featured-image img-fluid" src="/media/linux/kernel.png" alt="Catatan Kernel Linux 6.0">
+            <img class="featured-image img-fluid" src="/media/linux/kernel.png" alt="Catatan Optimasi Kernel Linux 6.0">
             
 	    <br>
 	    <details>

@@ -1,5 +1,5 @@
 ---
-title: Catatan Kernel Linux 6.0
+title: Catatan Optimasi Kernel Linux 6.0
 layout: post
 tag: linux
 image: '/media/linux/kernel.png'
