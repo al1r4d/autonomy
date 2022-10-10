@@ -103,7 +103,7 @@ header h2 {
 
 @media screen and (max-width: 640px) {
   header .left {
-    margin: 0.75em 0 0 0;
+    margin: 0.5em 0 0 0;
   }
   header ul {
     margin: 0.5em 0;
@@ -157,7 +157,6 @@ nav li .current {
 
 @media screen and (max-width: 640px) {
   nav.right {
-    width: 100%;
     margin: 0 0.5em;
     padding: 0;
   }
