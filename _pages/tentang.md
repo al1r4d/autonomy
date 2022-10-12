@@ -4,7 +4,7 @@ layout: page
 permalink: /tentang
 ---
 ## Pemilik
-<img class="right avatar" src="/media/author.jpg">
+<img style="width:150px" class="right avatar" src="/media/author.jpg">
 **Halo semua!**
 
 Nama saya Alif Radhitya, seorang pelajar sekaligus pengguna Gentoo Linux. Saya juga aktif di Kelompok Linux Arek Suroboyo. Perlu diingat saya bukan **progammer**, apalagi **hacker**.

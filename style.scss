@@ -3,10 +3,10 @@
 @import "variables";
 
 html {
-    font-family: "Liberation Sans", sans-serif;
+    font-family: "Liberation Sans";
     font-size: 16px;
     color: #fff;
-    background: #222;
+    background: #1f1f1f;
     @include mobile {
         font-size: 16px;
     }
@@ -40,15 +40,15 @@ tr {
 }
 
 a {
-    color: $green;
+    color: $blue;
 }
 
 a:visited {
-    color: $green;
+    color: $blue;
 }
 
 a:hover {
-    color: $magenta;
+    color: $blue;
 }
 
 h1 {
@@ -76,6 +76,7 @@ border-bottom: 1px solid #333;
     a:visited,
     a:hover {
         color: $white;
+	text-decoration: none;
     }
 
     a,
@@ -120,7 +121,7 @@ nav {
     }
 
     a:hover {
-        background: $green;
+        background: $blue;
         text-decoration: none;
     }
 
@@ -315,11 +316,11 @@ article {
 
     .avatar {
         margin: 0 0 1em 1em;
-        max-width: 125px;
+        max-width: 250px;
         border-radius: 2px;
         
         @include mobile {
-                max-width: 100px;
+                max-width: 250px;
         }
     }
 
@@ -407,7 +408,7 @@ article,
 
 footer {
 border-top: 0px solid #333;
-	background: #222;
+	background: $footer;
     padding: 1em 0 1em 0;
     margin-top: 2em;
 }
@@ -510,7 +511,7 @@ tr:nth-child(even){
    
 	display: block;
     background-color: #333333;
-    color: #f39f03;
+    color: $white;
     margin-left: -1rem;
     margin-right: -1rem;
     padding: 10px;
@@ -520,7 +521,7 @@ tr:nth-child(even){
 	@include mobile {
 	display: block;
     background-color: #333333;
-    color: #f39f03;
+    color: $white;
     margin-left: -1rem;
     margin-right: -1rem;
     padding: 2rem;
@@ -738,7 +739,7 @@ $c-purples: #532E62, #8E44AD, #9B59B6;
     border:none;
     padding: 10px 15px;
     font-size: 16px;
-    font-family: "Liberation Sans", sans-serif;
+    font-family: "Liberation Sans";
     color: #fff;
     outline: none;
     cursor: pointer;

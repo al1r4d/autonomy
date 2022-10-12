@@ -1,9 +1,9 @@
 @charset "UTF-8";
 html {
-  font-family: "Liberation Sans", sans-serif;
+  font-family: "Liberation Sans";
   font-size: 16px;
   color: #fff;
-  background: #222;
+  background: #1f1f1f;
 }
 
 @media screen and (max-width: 640px) {
@@ -43,15 +43,15 @@ tr {
 }
 
 a {
-  color: #7E9F5B;
+  color: #9abdda;
 }
 
 a:visited {
-  color: #7E9F5B;
+  color: #9abdda;
 }
 
 a:hover {
-  color: #982395;
+  color: #9abdda;
 }
 
 h1 {
@@ -90,6 +90,7 @@ header a,
 header a:visited,
 header a:hover {
   color: #fff;
+  text-decoration: none;
 }
 
 header a,
@@ -128,7 +129,7 @@ nav a {
 }
 
 nav a:hover {
-  background: #7E9F5B;
+  background: #9abdda;
   text-decoration: none;
 }
 
@@ -319,13 +320,13 @@ article .tags {
 
 article .avatar {
   margin: 0 0 1em 1em;
-  max-width: 125px;
+  max-width: 250px;
   border-radius: 2px;
 }
 
 @media screen and (max-width: 640px) {
   article .avatar {
-    max-width: 100px;
+    max-width: 250px;
   }
 }
 
@@ -412,7 +413,7 @@ article hr {
 /*------------------------------*/
 footer {
   border-top: 0px solid #333;
-  background: #222;
+  background: #1f1f1f;
   padding: 1em 0 1em 0;
   margin-top: 2em;
 }
@@ -513,7 +514,7 @@ tr:nth-child(even) {
 .perhatian {
   display: block;
   background-color: #333333;
-  color: #f39f03;
+  color: #fff;
   margin-left: -1rem;
   margin-right: -1rem;
   padding: 10px;
@@ -524,7 +525,7 @@ tr:nth-child(even) {
   .perhatian {
     display: block;
     background-color: #333333;
-    color: #f39f03;
+    color: #fff;
     margin-left: -1rem;
     margin-right: -1rem;
     padding: 2rem;
@@ -747,7 +748,7 @@ div.search {
   border: none;
   padding: 10px 15px;
   font-size: 16px;
-  font-family: "Liberation Sans", sans-serif;
+  font-family: "Liberation Sans";
   color: #fff;
   outline: none;
   cursor: pointer;
