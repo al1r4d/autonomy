@@ -30,7 +30,9 @@ Saya menggunakan Mastodon di instansi [mstdn.starnix.network](https://mstdn.star
 ### Pleroma
 ![](/media/fediverse/pleroma.png)
 
-### Misskey
-![](/media/fediverse/misskey.png)
+Pleroma adalah media sosial microblogging yang dapat tersambung server lain yang mendukung ActivityPub. Artinya, Anda dapat meng-host server untuk diri sendiri atau teman Anda, etapi tetap bertukar pesan dengan orang-orang di server yang lebih besar. Pleroma tersambung dengan semua server yang mengimplementasikan ActivityPub, seperti Friendica, GNU Social, Hubzilla, Mastodon, Misskey, Peertube, dan Pixelfed.
+
+Pleroma ditulis dengan Elixir dan menggunakan PostgresSQL untuk penyimpanan data. Ini cukup efisien untuk dijalankan pada perangkat berdaya rendah seperti Raspberry Pi.
 
 ## Haruskah Anda Mencobanya?
+Dunia Fediverse sangat mengagumkan. Anda bisa melihat bagaimana tersambung dengan pengguna lain, meskipun beda server. Saya sudah mencobanya, anda kapan?
