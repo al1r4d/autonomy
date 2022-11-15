@@ -6,12 +6,6 @@ paginate: 5
 permalink: /:title
 paginate_path: "/weblog/page:num/"
 
-kramdown:
-  input: GFM
-  
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-      css_class: 'highlight'
 feed:
   path: atom.xml
   posts_limit: 2020

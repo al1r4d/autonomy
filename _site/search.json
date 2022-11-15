@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Mengkustomisasi Emacs",
+      "category" : "",
+      "tags"     : "teknologi",
+	"url"      : "/menyiapkan-emacs",
+	"date"     : "2022-11-15 00:00:00 +0700"
+	
+    } ,
+  
+    {
       "title"    : "Dunia Fediverse",
       "category" : "",
       "tags"     : "teknologi",
