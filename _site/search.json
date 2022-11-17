@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Membuat Blog Jekyll di Linux",
+      "category" : "",
+      "tags"     : "linux",
+	"url"      : "/membuat-blog-jekyll-di-linux",
+	"date"     : "2022-11-17 00:00:00 +0700"
+	
+    } ,
+  
+    {
       "title"    : "Mengkustomisasi Emacs",
       "category" : "",
       "tags"     : "teknologi",
