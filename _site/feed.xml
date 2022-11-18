@@ -1,5 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-17T22:44:55+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">autonomy</title><subtitle>Hanya ${USER} berbagi pengalaman</subtitle><entry><title type="html">Membuat Blog Jekyll di Linux</title><link href="http://localhost:4000/membuat-blog-jekyll-di-linux" rel="alternate" type="text/html" title="Membuat Blog Jekyll di Linux" /><published>2022-11-17T00:00:00+07:00</published><updated>2022-11-17T00:00:00+07:00</updated><id>http://localhost:4000/membuat-blog-jekyll-di-linux</id><content type="html" xml:base="http://localhost:4000/membuat-blog-jekyll-di-linux"><![CDATA[<h2 id="apa-itu-jekyll">Apa Itu Jekyll</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-18T17:30:19+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">autonomy</title><subtitle>Hanya ${USER} berbagi pengalaman</subtitle><entry><title type="html">Membuat Blog Jekyll di Linux</title><link href="http://localhost:4000/membuat-blog-jekyll-di-linux" rel="alternate" type="text/html" title="Membuat Blog Jekyll di Linux" /><published>2022-11-17T00:00:00+07:00</published><updated>2022-11-17T00:00:00+07:00</updated><id>http://localhost:4000/membuat-blog-jekyll-di-linux</id><content type="html" xml:base="http://localhost:4000/membuat-blog-jekyll-di-linux"><![CDATA[<p>Blog bukan harus tentang Wordpress, Medium, atau Wordpress. Ada Jekyll yang bisa digunakan, contohnya blog ini. Mari kita kupas lebih dalam tentangnya.</p>
 
+<h2 id="apa-itu-jekyll">Apa Itu Jekyll</h2>
+<p>Singkatnya Jekyll adalah static website generator yang dapat mengubah file markdown menjadi html. Dibangun menggunakan Ruby dan bersifat <em>free open source software</em> dengan lisensi MIT.</p>
+
+<p>Yang saya sukai dari Jekyll adalah kesederhanaan. Tidak ada database yang bikin penuh. Anda tidak butuh spesifikasi tinggi untuk memasang.</p>
+
+<p>Di bawah ini adalah gambaran letak folder yang digunakan Jekyll. Lebih jelasnya bisa baca tutorial step by step di website <a href="https://jekyllrb.com/docs/step-by-step/01-setup/">Jekyll</a>.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── _includes
 ├── _layouts
 ├── _pages
@@ -8,17 +14,32 @@
 </code></pre></div></div>
 
 <h2 id="memasang-jekyll-di-linux">Memasang Jekyll di Linux</h2>
+<p>Posisi saya ada di Devuan GNU/Linux. Untuk memasang Jekyll, saya menggunakan cara di bawah.</p>
 
+<p>Mengapa tidak langsung dari repositori? Entahlah, kadang saya dapat error kalau install Jekyll dari repositori distro. Sehingga saya mengunduh langsung lewat <code class="language-plaintext highlighter-rouge">gem</code>.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt -y install ruby ruby-dev
 $ gem install bundler
 $ gem install jekyll
 </code></pre></div></div>
 
 <h2 id="membuat-blog-jekyll">Membuat Blog Jekyll</h2>
-
+<p>Kalau sudah pasang Jekyll, saatnya menyalakannya. Anda dapat menggunakan perintah di bawah.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll serve
 </code></pre></div></div>
-<h2 id="github-pages--jekyll">Github Pages &amp; Jekyll</h2>]]></content><author><name></name></author><category term="linux" /><summary type="html"><![CDATA[Apa Itu Jekyll]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/media/jekyll/jekyll.jpg" /><media:content medium="image" url="http://localhost:4000/media/jekyll/jekyll.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Mengkustomisasi Emacs</title><link href="http://localhost:4000/menyiapkan-emacs" rel="alternate" type="text/html" title="Mengkustomisasi Emacs" /><published>2022-11-15T00:00:00+07:00</published><updated>2022-11-15T00:00:00+07:00</updated><id>http://localhost:4000/menyiapkan-emacs</id><content type="html" xml:base="http://localhost:4000/menyiapkan-emacs"><![CDATA[]]></content><author><name></name></author><category term="teknologi" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/media/emacs/emacs.jpg" /><media:content medium="image" url="http://localhost:4000/media/emacs/emacs.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Dunia Fediverse</title><link href="http://localhost:4000/dunia-fediverse" rel="alternate" type="text/html" title="Dunia Fediverse" /><published>2022-10-12T00:00:00+07:00</published><updated>2022-10-12T00:00:00+07:00</updated><id>http://localhost:4000/dunia-fediverse</id><content type="html" xml:base="http://localhost:4000/dunia-fediverse"><![CDATA[<p>Media sosial bukan hanya tentang Facebook, Instagram, Twitter, Line, Whatsapp, dan mainstream lainnya. Di luar sana, telah hidup media sosial underground yang belum orang umum tahu.</p>
+
+<p>Jika anda belum punya blog, anda bisa <em>clone</em> tema bebas. Misalnya dari Github.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/pages-themes/minimal
+$ cd minimal
+$ jekyll serve
+</code></pre></div></div>
+<h2 id="github-pages--jekyll">Github Pages &amp; Jekyll</h2>
+<p><img src="/media/jekyll/github-pages.png" alt="" />
+Saya ada informasi menarik. Anda bisa mengonlinekan blog Jekyll secara gratis di Github. Yang anda butuhkan hanyalah akun Github saja.</p>
+<ol>
+  <li>Push folder blog Jekyll anda.</li>
+  <li>Atur <code class="language-plaintext highlighter-rouge">branch</code> di menu Pages.</li>
+  <li>Jangan lupa pointing domain anda ke Github Pages. <a href="https://init.web.id/custom-apex-domain-untuk-github-pages/">Tutorial ada disini</a></li>
+</ol>]]></content><author><name></name></author><category term="linux" /><summary type="html"><![CDATA[Blog bukan harus tentang Wordpress, Medium, atau Wordpress. Ada Jekyll yang bisa digunakan, contohnya blog ini. Mari kita kupas lebih dalam tentangnya.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/media/jekyll/jekyll.jpg" /><media:content medium="image" url="http://localhost:4000/media/jekyll/jekyll.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Mengkustomisasi Emacs</title><link href="http://localhost:4000/menyiapkan-emacs" rel="alternate" type="text/html" title="Mengkustomisasi Emacs" /><published>2022-11-15T00:00:00+07:00</published><updated>2022-11-15T00:00:00+07:00</updated><id>http://localhost:4000/menyiapkan-emacs</id><content type="html" xml:base="http://localhost:4000/menyiapkan-emacs"><![CDATA[]]></content><author><name></name></author><category term="teknologi" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/media/emacs/emacs.jpg" /><media:content medium="image" url="http://localhost:4000/media/emacs/emacs.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Dunia Fediverse</title><link href="http://localhost:4000/dunia-fediverse" rel="alternate" type="text/html" title="Dunia Fediverse" /><published>2022-10-12T00:00:00+07:00</published><updated>2022-10-12T00:00:00+07:00</updated><id>http://localhost:4000/dunia-fediverse</id><content type="html" xml:base="http://localhost:4000/dunia-fediverse"><![CDATA[<p>Media sosial bukan hanya tentang Facebook, Instagram, Twitter, Line, Whatsapp, dan mainstream lainnya. Di luar sana, telah hidup media sosial underground yang belum orang umum tahu.</p>
 
 <p>Semenjak pemberitaan Elon Musk ingin membeli Twitter, nama <strong>Mastodon</strong> kerap kali disebut sebagai alternatif, bagi mereka yang membenci Elon.</p>
 

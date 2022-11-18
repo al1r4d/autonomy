@@ -35,8 +35,8 @@
 <meta name="generator" content="Jekyll v4.3.1" />
 <meta property="og:title" content="Membuat Blog Jekyll di Linux" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Apa Itu Jekyll" />
-<meta property="og:description" content="Apa Itu Jekyll" />
+<meta name="description" content="Blog bukan harus tentang Wordpress, Medium, atau Wordpress. Ada Jekyll yang bisa digunakan, contohnya blog ini. Mari kita kupas lebih dalam tentangnya." />
+<meta property="og:description" content="Blog bukan harus tentang Wordpress, Medium, atau Wordpress. Ada Jekyll yang bisa digunakan, contohnya blog ini. Mari kita kupas lebih dalam tentangnya." />
 <link rel="canonical" href="http://localhost:4000/membuat-blog-jekyll-di-linux" />
 <meta property="og:url" content="http://localhost:4000/membuat-blog-jekyll-di-linux" />
 <meta property="og:site_name" content="autonomy" />
@@ -47,7 +47,7 @@
 <meta property="twitter:image" content="http://localhost:4000/media/jekyll/jekyll.jpg" />
 <meta property="twitter:title" content="Membuat Blog Jekyll di Linux" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-17T00:00:00+07:00","datePublished":"2022-11-17T00:00:00+07:00","description":"Apa Itu Jekyll","headline":"Membuat Blog Jekyll di Linux","image":"http://localhost:4000/media/jekyll/jekyll.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/membuat-blog-jekyll-di-linux"},"url":"http://localhost:4000/membuat-blog-jekyll-di-linux"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-17T00:00:00+07:00","datePublished":"2022-11-17T00:00:00+07:00","description":"Blog bukan harus tentang Wordpress, Medium, atau Wordpress. Ada Jekyll yang bisa digunakan, contohnya blog ini. Mari kita kupas lebih dalam tentangnya.","headline":"Membuat Blog Jekyll di Linux","image":"http://localhost:4000/media/jekyll/jekyll.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/membuat-blog-jekyll-di-linux"},"url":"http://localhost:4000/membuat-blog-jekyll-di-linux"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- Needed for the "current" class -->
 
@@ -95,8 +95,14 @@
             <img class="featured-image img-fluid" src="/media/jekyll/jekyll.jpg" alt="Membuat Blog Jekyll di Linux">
              
 	<ul><li><a href="#apa-itu-jekyll">Apa Itu Jekyll</a></li><li><a href="#memasang-jekyll-di-linux">Memasang Jekyll di Linux</a></li><li><a href="#membuat-blog-jekyll">Membuat Blog Jekyll</a></li><li><a href="#github-pages--jekyll">Github Pages &amp; Jekyll</a></li></ul> 
-<p><h2 id="apa-itu-jekyll">Apa Itu Jekyll</h2>
+<p><p>Blog bukan harus tentang Wordpress, Medium, atau Wordpress. Ada Jekyll yang bisa digunakan, contohnya blog ini. Mari kita kupas lebih dalam tentangnya.</p>
 
+<h2 id="apa-itu-jekyll">Apa Itu Jekyll</h2>
+<p>Singkatnya Jekyll adalah static website generator yang dapat mengubah file markdown menjadi html. Dibangun menggunakan Ruby dan bersifat <em>free open source software</em> dengan lisensi MIT.</p>
+
+<p>Yang saya sukai dari Jekyll adalah kesederhanaan. Tidak ada database yang bikin penuh. Anda tidak butuh spesifikasi tinggi untuk memasang.</p>
+
+<p>Di bawah ini adalah gambaran letak folder yang digunakan Jekyll. Lebih jelasnya bisa baca tutorial step by step di website <a href="https://jekyllrb.com/docs/step-by-step/01-setup/">Jekyll</a>.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── _includes
 ├── _layouts
 ├── _pages
@@ -105,17 +111,32 @@
 </code></pre></div></div>
 
 <h2 id="memasang-jekyll-di-linux">Memasang Jekyll di Linux</h2>
+<p>Posisi saya ada di Devuan GNU/Linux. Untuk memasang Jekyll, saya menggunakan cara di bawah.</p>
 
+<p>Mengapa tidak langsung dari repositori? Entahlah, kadang saya dapat error kalau install Jekyll dari repositori distro. Sehingga saya mengunduh langsung lewat <code class="language-plaintext highlighter-rouge">gem</code>.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt -y install ruby ruby-dev
 $ gem install bundler
 $ gem install jekyll
 </code></pre></div></div>
 
 <h2 id="membuat-blog-jekyll">Membuat Blog Jekyll</h2>
-
+<p>Kalau sudah pasang Jekyll, saatnya menyalakannya. Anda dapat menggunakan perintah di bawah.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll serve
 </code></pre></div></div>
+
+<p>Jika anda belum punya blog, anda bisa <em>clone</em> tema bebas. Misalnya dari Github.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/pages-themes/minimal
+$ cd minimal
+$ jekyll serve
+</code></pre></div></div>
 <h2 id="github-pages--jekyll">Github Pages &amp; Jekyll</h2>
+<p><img src="/media/jekyll/github-pages.png" alt="" />
+Saya ada informasi menarik. Anda bisa mengonlinekan blog Jekyll secara gratis di Github. Yang anda butuhkan hanyalah akun Github saja.</p>
+<ol>
+  <li>Push folder blog Jekyll anda.</li>
+  <li>Atur <code class="language-plaintext highlighter-rouge">branch</code> di menu Pages.</li>
+  <li>Jangan lupa pointing domain anda ke Github Pages. <a href="https://init.web.id/custom-apex-domain-untuk-github-pages/">Tutorial ada disini</a></li>
+</ol>
 </p>
 </article>
 <hr>
