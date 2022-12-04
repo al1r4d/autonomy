@@ -3,14 +3,16 @@ title: Tentang
 layout: page
 permalink: /tentang
 ---
-## Pemilik
+## Tentang
 <img style="width:150px" class="right avatar" src="/media/author.jpg">
-**Halo semua!**
+Website pribadi yang didedikasikan untuk petualangan saya terhadap teknologi, terutama Android dan Linux.
 
-Nama saya Alif Radhitya, seorang pelajar sekaligus pengguna Gentoo Linux. 
+## Minat Saya
+- Linux
+- Minimalisme
+- Modifikasi dan meningkatkan performa.
+- Kustomisasi ROM Android.
+- Gerakan program bebas terbuka dan proyek GNU.
 
-Saya juga aktif di Kelompok Linux Arek Suroboyo. Perlu diingat saya bukan **progammer**, apalagi **hacker**.
-
-Blog ini adalah blog pribadi seputar teknologi, terutama Linux dan pengalaman saya menggunakan Linux.
-
-Saya terbuka soal masukan. Silahkan hubungi saya lewat email sesuai yang saya berikan.
+## Profesi
+Saya adalah pelajar sekolah menengah atas di Surabaya.
